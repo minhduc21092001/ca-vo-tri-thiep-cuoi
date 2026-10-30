@@ -174,7 +174,7 @@
     CU_CHI.forEach(function (ev) { document.removeEventListener(ev, tuPhatNhac, true); });
   }
   CU_CHI.forEach(function (ev) { document.addEventListener(ev, tuPhatNhac, true); });
-  tuPhatNhac(); // một số trình duyệt cho phát luôn, không cần chờ
+  if (!document.getElementById('man-mo')) tuPhatNhac(); // nếu có màn mở thiệp thì xử lý ở phần dưới
   function capNhatNutNhac() { nutNhac.textContent = audio.paused ? '🔈' : '🔊'; }
   audio.addEventListener('play', capNhatNutNhac);
   audio.addEventListener('pause', capNhatNutNhac);
@@ -188,6 +188,18 @@
   var manMo = document.getElementById('man-mo');
   if (manMo) {
     var daMo = false;
+    // Thử tự phát nhạc ngay khi mở trang. Trình duyệt cho phép (khách từng tương tác với trang, app Zalo/Facebook cho phép...)
+    // thì nhạc vang lên luôn và bỏ qua màn hình này; bị chặn thì mới hiện "Chạm để mở thiệp".
+    var hienManMo = function () {
+      if (daMo) return;
+      document.body.classList.add('chua-mo'); // tạm dừng cánh cửa, khoá cuộn
+      manMo.classList.add('hien');
+    };
+    audio.play().then(function () {
+      daMo = true;
+      goLangNghe();
+      manMo.parentNode && manMo.parentNode.removeChild(manMo);
+    }).catch(hienManMo);
     var moThiep = function () {
       if (daMo) return;
       daMo = true;

@@ -123,7 +123,7 @@ Lời chúc được lưu vào Google Sheet nếu điền link bên dưới (cá
 
 ## 12. Màn hình mở thiệp và nhạc nền
 
-Trình duyệt **không cho trang tự phát nhạc có tiếng** khi vừa mở. Vì vậy thiệp hiện một màn hình "Chạm để mở thiệp" đầu tiên: khách chạm vào là nhạc vang lên và cánh cửa mở ra. Đặt `không` ở dòng đầu để bỏ màn hình này (khi đó nhạc chỉ bắt đầu ở lần chạm đầu tiên của khách).
+Thiệp luôn **thử tự phát nhạc ngay khi mở**. Nếu trình duyệt của khách cho phép thì nhạc vang lên luôn. Nhiều trình duyệt chặn nhạc có tiếng với khách vào lần đầu, lúc đó thiệp hiện màn hình "Chạm để mở thiệp": khách chạm là nhạc vang lên và cánh cửa mở ra. Đặt `không` ở dòng đầu để bỏ màn hình này (khi đó nhạc bắt đầu ở lần chạm đầu tiên của khách nếu bị chặn).
 
 - Màn mở thiệp - bật (có/không): có
 - Màn mở thiệp - dòng trên: Trân trọng kính mời

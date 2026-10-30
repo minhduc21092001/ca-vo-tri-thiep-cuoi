@@ -211,7 +211,7 @@ function build() {
   };
 
   const coManMo = !laKhong(lay('Màn mở thiệp - bật (có/không)'));
-  tinhSan['@body-class'] = coManMo ? 'chua-mo' : '';
+  tinhSan['@body-class'] = '';
   tinhSan['@man-mo-thiep'] = coManMo ? dien(fs.readFileSync(path.join(GOC, 'src/man-mo.html'), 'utf8'), lay, {}) : '';
   const thiep = dien(fs.readFileSync(path.join(GOC, 'src/thiep.html'), 'utf8'), lay, tinhSan);
   const taoLink = dien(fs.readFileSync(path.join(GOC, 'src/tao-link.html'), 'utf8'), lay, tinhSan);

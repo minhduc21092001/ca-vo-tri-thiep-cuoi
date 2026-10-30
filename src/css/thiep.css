@@ -341,10 +341,11 @@ body {font-family: "Open Sans", sans-serif}
 /* ---- Màn hình "Chạm để mở thiệp" (chạm xong mới phát nhạc và mở cửa) ---- */
 body.chua-mo{overflow: hidden;}
 body.chua-mo .cua{animation-play-state: paused;}
-#man-mo{position: fixed; inset: 0; z-index: 2147483000; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 7vh; box-sizing: border-box;
+#man-mo{position: fixed; inset: 0; z-index: 2147483000; display: none; align-items: flex-end; justify-content: center; padding-bottom: 16vh; box-sizing: border-box;
   height: 100vh; height: 100dvh; background-size: cover; background-position: center top; color: #fff; text-align: center;
   touch-action: none; cursor: pointer; transition: opacity .7s ease, visibility .7s;}
 #man-mo::before{content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(20,12,16,.35), rgba(20,12,16,.72));}
+#man-mo.hien{display: flex;}
 #man-mo.dang-mo{opacity: 0; visibility: hidden; pointer-events: none;}
 #man-mo .mm-noidung{position: relative; padding: 0 24px; max-width: 420px;}
 #man-mo p{margin: 0; font-family: Quicksand, sans-serif; letter-spacing: 3px; text-transform: uppercase; font-size: 13px; opacity: .9;}
