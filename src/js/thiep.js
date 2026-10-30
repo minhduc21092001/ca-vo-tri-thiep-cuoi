@@ -184,6 +184,22 @@
     else { nguoiDungTat = true; audio.pause(); }
   });
 
+  /* ---------------------------------------------------------------- màn hình "Chạm để mở thiệp" */
+  var manMo = document.getElementById('man-mo');
+  if (manMo) {
+    var daMo = false;
+    var moThiep = function () {
+      if (daMo) return;
+      daMo = true;
+      audio.play().catch(function () {}); // cử chỉ chạm này cho phép phát nhạc
+      document.body.classList.remove('chua-mo'); // cánh cửa bắt đầu mở
+      manMo.classList.add('dang-mo');
+      setTimeout(function () { manMo.parentNode && manMo.parentNode.removeChild(manMo); }, 900);
+    };
+    manMo.addEventListener('click', moThiep);
+    manMo.addEventListener('touchend', function (e) { e.preventDefault(); moThiep(); });
+  }
+
   batHieuUng();
   if ('requestIdleCallback' in window) requestIdleCallback(giaiMaTruocAnhAlbum, { timeout: 3000 });
   else setTimeout(giaiMaTruocAnhAlbum, 1500);

@@ -121,7 +121,14 @@ Lời chúc được lưu vào Google Sheet nếu điền link bên dưới (cá
 - Tài khoản 2 - ảnh QR: anh/mung-cuoi/qr-tai-khoan-2.png
 - Hiện nút quà nổi (có/không): có
 
-## 12. Nhạc nền
+## 12. Màn hình mở thiệp và nhạc nền
+
+Trình duyệt **không cho trang tự phát nhạc có tiếng** khi vừa mở. Vì vậy thiệp hiện một màn hình "Chạm để mở thiệp" đầu tiên: khách chạm vào là nhạc vang lên và cánh cửa mở ra. Đặt `không` ở dòng đầu để bỏ màn hình này (khi đó nhạc chỉ bắt đầu ở lần chạm đầu tiên của khách).
+
+- Màn mở thiệp - bật (có/không): có
+- Màn mở thiệp - dòng trên: Trân trọng kính mời
+- Màn mở thiệp - ngày: 16 . 11 . 2026
+- Màn mở thiệp - nút: Chạm để mở thiệp
 
 - Nhạc nền: nhac/nhac-nen.mp3
 
