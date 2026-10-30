@@ -38,7 +38,6 @@ body {font-family: "Open Sans", sans-serif}
 #GROUP36{width: 128.875px; height: 241.003px;top: 422.998px; left: 418.749px;}
 #HTML_CODE3{width: 128.875px; height: 80.5473px;top: 80.228px; left: 0px;}
 #HTML_CODE4{width: 128.363px; height: 80.227px;}
-#HTML_CODE5{width: 128.875px; height: 80.227px;top: 160.776px; left: 0px;}
 #GROUP74{width: 420px; height: 2094.36px;top: 3673.27px; left: 0px;}
 #IMAGE94,#IMAGE94 > .ladi-image > .ladi-image-background,#IMAGE95,#IMAGE95 > .ladi-image > .ladi-image-background{width: 189.914px; height: 284.871px;}
 #IMAGE94{top: 288.5px; left: 229.66px;}
@@ -324,3 +323,17 @@ body {font-family: "Open Sans", sans-serif}
 }
 #GROUP74 > .ladi-group > .ladi-element.ladi-animation > .ladi-image{animation: albumHien 0.6s ease-out 0s 1 both !important; transition: none;}
 #GROUP74 > .ladi-group > .ladi-element > .ladi-image{will-change: opacity, transform; backface-visibility: hidden;}
+
+/* Tên cô dâu/chú rể dài hơn mẫu gốc: thu nhỏ chữ và nới khung để không bị xuống dòng */
+#HEADLINE97 > .ladi-headline,#HEADLINE98 > .ladi-headline{font-size: 29px;}
+#HEADLINE97,#HEADLINE98{top: 93px;}
+#HEADLINE15{width: 195px; top: 1055px;}
+#HEADLINE15 > .ladi-headline{font-size: 25px;}
+#HEADLINE20{width: 215px; top: 1364px;}
+#HEADLINE20 > .ladi-headline{font-size: 25px;}
+/* Địa chỉ nhà gái dài hơn mẫu gốc */
+#HEADLINE17{width: 200px; left: -0.3px;}
+/* Ngày tháng đầu trang: phông này vẽ số 1 rất mảnh, giãn chữ để "16.11" cân như mẫu gốc */
+#HEADLINE101 > .ladi-headline{letter-spacing: 6px; text-indent: 6px;}
+/* Bản đồ: hạ xuống để chừa chỗ cho địa chỉ dài 2 dòng */
+#HTML_CODE6{top: 286px;}

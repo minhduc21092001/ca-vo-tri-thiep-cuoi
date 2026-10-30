@@ -36,7 +36,7 @@
 <div class="ladi-wraper"><div id="SECTION1" class='ladi-section'><div class='ladi-section-background'></div><div class="ladi-container"><div id="GROUP110" class='ladi-element'><div class='ladi-group'><div id="GROUP106" class='ladi-element'><div class='ladi-group'><div id="GROUP104" class='ladi-element'><div class='ladi-group'><div id="IMAGE118" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE119" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div></div></div><div id="GROUP105" class='ladi-element'><div class='ladi-group'><div id="IMAGE120" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE121" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div></div></div></div></div><div id="GROUP107" class='ladi-element'><div class='ladi-group'><div id="GROUP108" class='ladi-element'><div class='ladi-group'><div id="IMAGE122" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE123" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div></div></div><div id="GROUP109" class='ladi-element'><div class='ladi-group'><div id="IMAGE124" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE125" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div></div></div></div></div></div></div><div id="LINE4" class='ladi-element'><div class='ladi-line'><div class="ladi-line-container"></div></div></div><div id="IMAGE25" class='ladi-element'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="HEADLINE30" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Album - tiêu đề}}</h3> </div><div id="GROUP36" class='ladi-element'><div class='ladi-group'><div id="HTML_CODE3" class='ladi-element'><div class='ladi-html-code'><!-- ICON MÓN QUÀ -->
 <div id="gift-icon" style="
     position: fixed;
-    bottom: 70px;
+    bottom: 20px;
     right: 20px;
     z-index: 9999;
     cursor: pointer;
@@ -52,60 +52,43 @@
     <span style="font-size: 24px;">🎁</span>
 </div>
 
-<!-- POPUP QR -->
-<div id="qr-popup" style="
-    display: none;
-    position: fixed;
-    bottom: 150px;
-    right: 20px;
-    background: white;
-    border: 2px solid #ccc;
-    border-radius: 16px;
-    padding: 15px 12px;
-    z-index: 10000;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-    text-align: center;
-    max-width: 240px;
-    font-family: 'Segoe UI', sans-serif;
-">
-    <img id="qr-img" src="{{url:Tài khoản 1 - ảnh QR}}" alt="QR" style="width: 150px; height: 210px; border-radius: 8px;">
-    <p style="margin-top: 10px; font-weight: 600; font-size: 14px; line-height: 1.4;">
-        Ngân hàng: {{Tài khoản 1 - ngân hàng}}<br>
-        STK: <span id="stk-text">{{Tài khoản 1 - số tài khoản}}</span><br>
-        Chủ TK: {{Tài khoản 1 - chủ tài khoản}}
-    </p>
-
-    <!-- Nút tải ảnh -->
-    <button type="button" data-tai-qr style="
-        margin: 6px 4px;
-        padding: 8px 14px;
-        border: none;
-        border-radius: 8px;
-        background: linear-gradient(135deg, #4caf50, #66bb6a);
-        color: white;
-        font-weight: 500;
-        font-size: 13px;
-        cursor: pointer;
-        transition: 0.3s;
-    " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-        📥 Tải ảnh
-    </button>
-
-    <!-- Nút sao chép -->
-    <button type="button" data-sao-chep-stk style="
-        margin: 6px 4px;
-        padding: 8px 14px;
-        border: none;
-        border-radius: 8px;
-        background: linear-gradient(135deg, #2196f3, #42a5f5);
-        color: white;
-        font-weight: 500;
-        font-size: 13px;
-        cursor: pointer;
-        transition: 0.3s;
-    " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-        📋 Sao chép STK
-    </button>
+<!-- POPUP QR: tài khoản của cả hai người -->
+<style>
+  #qr-popup {
+    display: none; position: fixed; bottom: 70px; right: 12px; z-index: 10000;
+    width: 340px; max-width: calc(100vw - 24px); box-sizing: border-box;
+    background: #fff; border: 2px solid #f3c6dc; border-radius: 16px; padding: 12px 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25); text-align: center; font-family: 'Segoe UI', sans-serif;
+  }
+  #qr-popup .qua-tieu-de { margin: 0 0 8px; font-weight: 700; font-size: 15px; color: #c2185b; }
+  #qr-popup .qua-ds { display: flex; gap: 8px; }
+  #qr-popup .qua-tk { flex: 1; min-width: 0; background: #fff7fb; border-radius: 12px; padding: 8px 6px; }
+  #qr-popup .qua-tk img { width: 100%; aspect-ratio: 1; object-fit: contain; background: #fff; border-radius: 8px; display: block; }
+  #qr-popup .qua-tk p { margin: 8px 0 6px; font-weight: 600; font-size: 12.5px; line-height: 1.4; word-break: break-word; }
+  #qr-popup .qua-tk button {
+    display: block; width: 100%; margin: 5px 0 0; padding: 7px 4px; border: none; border-radius: 8px;
+    color: #fff; font-weight: 500; font-size: 12.5px; cursor: pointer;
+  }
+  #qr-popup .qua-tk button:hover { opacity: .85; }
+  #qr-popup [data-tai-qr] { background: linear-gradient(135deg, #4caf50, #66bb6a); }
+  #qr-popup [data-sao-chep-stk] { background: linear-gradient(135deg, #2196f3, #42a5f5); }
+</style>
+<div id="qr-popup">
+  <p class="qua-tieu-de">🎁 {{Nút gửi mừng cưới}}</p>
+  <div class="qua-ds">
+    <div class="qua-tk">
+      <img src="{{url:Tài khoản 1 - ảnh QR}}" alt="QR tài khoản 1">
+      <p>{{Tài khoản 1 - ngân hàng}}<br><span data-stk>{{Tài khoản 1 - số tài khoản}}</span><br>{{Tài khoản 1 - chủ tài khoản}}</p>
+      <button type="button" data-tai-qr>📥 Tải QR</button>
+      <button type="button" data-sao-chep-stk>📋 Chép STK</button>
+    </div>
+    <div class="qua-tk">
+      <img src="{{url:Tài khoản 2 - ảnh QR}}" alt="QR tài khoản 2">
+      <p>{{Tài khoản 2 - ngân hàng}}<br><span data-stk>{{Tài khoản 2 - số tài khoản}}</span><br>{{Tài khoản 2 - chủ tài khoản}}</p>
+      <button type="button" data-tai-qr>📥 Tải QR</button>
+      <button type="button" data-sao-chep-stk>📋 Chép STK</button>
+    </div>
+  </div>
 </div>
 
 </div></div><div id="HTML_CODE4" class='ladi-element'><div class='ladi-html-code'><audio id="myAudio" loop="">
@@ -118,50 +101,6 @@
     font-size: 20px; z-index: 10000; width: 40px; height: 40px;
     display: flex; align-items: center; justify-content: center; border-radius: 50%;">
     🔊
-</button>
-
-</div></div><div id="HTML_CODE5" class='ladi-element'><div class='ladi-html-code'><style>
-  #scrollBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    background-color: #ff6fb3; /* màu hồng */
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-  }
-
-  #scrollBtn:hover {
-    background-color: #e056a1;
-    transform: scale(1.08);
-  }
-
-  .arrow-icon {
-    width: 28px;
-    height: 28px;
-    transition: transform 0.3s ease;
-    fill: white;
-  }
-
-  .rotate-up {
-    transform: rotate(180deg);
-  }
-</style>
-
-<!-- BUTTON SCROLL -->
-<button id="scrollBtn">
-  <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M12 16l-6-6h12z"></path>
-  </svg>
 </button>
 
 </div></div></div></div><div id="GROUP74" class='ladi-element'><div class='ladi-group'><div id="IMAGE94" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE95" class='ladi-element ladi-animation-hidden'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE96" class='ladi-element ladi-animation-hidden'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE97" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE98" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE99" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE101" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE102" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE103" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE104" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE105" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE106" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE107" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div></div></div><div id="IMAGE48" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="GROUP59" class='ladi-element'><div class='ladi-group'><div id="BOX7" class='ladi-element'><div class='ladi-box ladi-transition'></div></div><div id="GROUP11" class='ladi-element ladi-animation-hidden'><div class='ladi-group'><div id="HEADLINE32" class='ladi-element'><h3 class='ladi-headline'    >{{Cảm ơn - dòng 1}}</h3> </div><div id="HEADLINE33" class='ladi-element'><h3 class='ladi-headline'    >{{Cảm ơn - dòng 2}}</h3> </div></div></div></div></div><div id="IMAGE1" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="GROUP87" class='ladi-element'><div class='ladi-group'><div id="IMAGE7" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE8" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE9" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div></div></div><div id="HEADLINE3" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Chữ Save The Date}}</h3> </div><div id="IMAGE2" class='ladi-element ladi-animation-hidden'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="HEADLINE97" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Tên chú rể}}</h3> </div><div id="HEADLINE98" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Tên cô dâu}}</h3> </div><div id="HEADLINE99" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >&amp;</h3> </div><div id="HEADLINE100" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Đầu trang - giờ và thứ}}</h3> </div><div id="LINE8" class='ladi-element'><div class='ladi-line'><div class="ladi-line-container"></div></div></div><div id="HEADLINE101" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Đầu trang - ngày và tháng}}</h3> </div><div id="HEADLINE102" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Đầu trang - năm}}</h3> </div><div id="HEADLINE103" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Đầu trang - ngày âm lịch}}</h3> </div><div id="GROUP75" class='ladi-element'><div class='ladi-group'><div id="BOX13" class='ladi-element'><div class='ladi-box ladi-transition'></div></div><div id="HTML_CODE6" class='ladi-element'><div class='ladi-html-code'><iframe src="{{@ban-do}}" width="365" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div><div id="IMAGE110" class='ladi-element ladi-animation-hidden'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="HEADLINE186" class='ladi-element'><h3 class='ladi-headline'    >{{Địa điểm - tiêu đề}}</h3> </div><div id="HEADLINE187" class='ladi-element'><h3 class='ladi-headline'    >{{Địa điểm - địa chỉ}}</h3> </div><div id="HEADLINE188" class='ladi-element'><h3 class='ladi-headline'    >{{Địa điểm - tên}}</h3> </div></div></div><div id="HTML_CODE8" class='ladi-element'><div class='ladi-html-code'><div class="cua-anh">

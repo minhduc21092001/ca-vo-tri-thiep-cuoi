@@ -135,60 +135,54 @@
   var nutQua = document.getElementById('gift-icon');
   var qrPopup = document.getElementById('qr-popup');
   nutQua.addEventListener('click', function () {
-    qrPopup.style.display = qrPopup.style.display === 'none' ? 'block' : 'none';
+    qrPopup.style.display = qrPopup.style.display === 'block' ? 'none' : 'block';
   });
-  document.querySelector('[data-tai-qr]').addEventListener('click', function () {
-    var a = document.createElement('a');
-    a.href = document.getElementById('qr-img').src;
-    a.download = 'QR-mung-cuoi' + (a.href.match(/\.\w+$/) || ['.png'])[0];
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  });
-  document.querySelector('[data-sao-chep-stk]').addEventListener('click', function () {
-    var stk = document.getElementById('stk-text').innerText.trim();
-    navigator.clipboard.writeText(stk).then(function () {
-      alert('Đã sao chép STK: ' + stk);
-    }, function () {
-      alert('Không thể sao chép!');
+  // Mỗi tài khoản (.qua-tk) có nút tải QR và chép số tài khoản riêng
+  qrPopup.querySelectorAll('.qua-tk').forEach(function (tk, i) {
+    tk.querySelector('[data-tai-qr]').addEventListener('click', function () {
+      var a = document.createElement('a');
+      a.href = tk.querySelector('img').src;
+      a.download = 'QR-mung-cuoi-' + (i + 1) + (a.href.match(/\.\w+$/) || ['.png'])[0];
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+    tk.querySelector('[data-sao-chep-stk]').addEventListener('click', function () {
+      var stk = tk.querySelector('[data-stk]').innerText.trim();
+      navigator.clipboard.writeText(stk).then(function () {
+        alert('Đã sao chép STK: ' + stk);
+      }, function () {
+        alert('Không thể sao chép!');
+      });
     });
   });
 
   /* ---------------------------------------------------------------- nhạc nền */
   var audio = document.getElementById('myAudio');
   var nutNhac = document.getElementById('toggleMusic');
-  var daPhat = false;
-  function phatNhac() {
-    if (daPhat) return;
-    daPhat = true;
-    audio.play().catch(function (err) { console.log('Lỗi phát nhạc:', err); });
+  var nguoiDungTat = false; // khách chủ động bấm tắt nhạc thì không tự bật lại
+  var CU_CHI = ['pointerdown', 'click', 'touchend', 'keydown'];
+  // Trình duyệt chỉ cho phát nhạc sau một cử chỉ thật (bấm, chạm, gõ phím; di chuột/cuộn thì không tính).
+  // Chỉ gỡ lắng nghe khi play() thành công, nếu bị chặn thì thử lại ở lần bấm/chạm sau.
+  function tuPhatNhac(e) {
+    if (nguoiDungTat || (e && nutNhac.contains(e.target))) return; // bấm vào nút loa thì để nút tự xử lý
+    var p = audio.play();
+    if (p && p.then) p.then(goLangNghe).catch(function () {});
+    else goLangNghe();
   }
-  ['click', 'touchstart', 'mousemove', 'keydown'].forEach(function (ev) {
-    document.addEventListener(ev, phatNhac, { once: true });
-  });
+  function goLangNghe() {
+    CU_CHI.forEach(function (ev) { document.removeEventListener(ev, tuPhatNhac, true); });
+  }
+  CU_CHI.forEach(function (ev) { document.addEventListener(ev, tuPhatNhac, true); });
+  tuPhatNhac(); // một số trình duyệt cho phát luôn, không cần chờ
+  function capNhatNutNhac() { nutNhac.textContent = audio.paused ? '🔈' : '🔊'; }
+  audio.addEventListener('play', capNhatNutNhac);
+  audio.addEventListener('pause', capNhatNutNhac);
+  capNhatNutNhac();
   nutNhac.addEventListener('click', function () {
-    if (audio.paused) { audio.play(); nutNhac.textContent = '🔊'; }
-    else { audio.pause(); nutNhac.textContent = '🔈'; }
+    if (audio.paused) { nguoiDungTat = false; audio.play().catch(function () {}); }
+    else { nguoiDungTat = true; audio.pause(); }
   });
-
-  /* ---------------------------------------------------------------- nút cuộn xuống / lên */
-  var nutCuon = document.getElementById('scrollBtn');
-  var muiTen = nutCuon.querySelector('.arrow-icon');
-  function oCuoiTrang() {
-    return window.innerHeight + window.scrollY >= document.body.scrollHeight - 5;
-  }
-  nutCuon.addEventListener('click', function () {
-    window.scrollTo({ top: oCuoiTrang() ? 0 : document.body.scrollHeight, behavior: 'smooth' });
-  });
-  var choKhungHinh = false;
-  window.addEventListener('scroll', function () {
-    if (choKhungHinh) return; // tối đa 1 lần mỗi khung hình
-    choKhungHinh = true;
-    requestAnimationFrame(function () {
-      choKhungHinh = false;
-      muiTen.classList.toggle('rotate-up', oCuoiTrang());
-    });
-  }, { passive: true });
 
   batHieuUng();
   if ('requestIdleCallback' in window) requestIdleCallback(giaiMaTruocAnhAlbum, { timeout: 3000 });

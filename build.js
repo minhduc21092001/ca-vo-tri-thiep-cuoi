@@ -21,8 +21,8 @@ const O_ANH = {
   'Ảnh bìa': 'IMAGE2',
   'Ảnh cạnh nhà trai': 'IMAGE6',
   'Ảnh cạnh nhà gái': 'IMAGE5',
-  'Ảnh thư mời trái': 'IMAGE7',
-  'Ảnh thư mời giữa': 'IMAGE8',
+  'Ảnh thư mời trái': 'IMAGE8',
+  'Ảnh thư mời giữa': 'IMAGE7',
   'Ảnh thư mời phải': 'IMAGE9',
   'Ảnh nền lịch': 'IMAGE86',
   'Ảnh cảm ơn cuối trang': 'IMAGE48',
@@ -34,6 +34,8 @@ const O_ANH = {
   'Album ảnh 10': 'IMAGE103', 'Album ảnh 11': 'IMAGE106', 'Album ảnh 12': 'IMAGE104',
   'Album ảnh 13': 'IMAGE107',
 };
+// Vị trí cắt ảnh khi khung khác tỉ lệ ảnh (mặc định: giữa). Khung popup thấp nên lấy cao hơn để không cắt mất mặt.
+const VI_TRI_ANH = { IMAGE58: 'center top' };
 const O_QR = { 'Tài khoản 1 - ảnh QR': 'IMAGE114', 'Tài khoản 2 - ảnh QR': 'IMAGE115' };
 
 // Toạ độ lưới lịch (px, trong khung lịch rộng 420px) – lấy từ thiết kế gốc
@@ -135,19 +137,25 @@ function taoBanDo(lay) {
   return `https://maps.google.com/maps?q=${encodeURIComponent(diaChi)}&z=16&output=embed`;
 }
 
+const laKhong = (v) => /^(không|khong|ko|no|0|ẩn)$/i.test(v.trim());
+
 function taoCssAnh(lay) {
   let css = '';
   for (const [nhan, id] of Object.entries(O_ANH)) {
     const anh = lay(nhan);
     kiemTraFile(anh, nhan);
-    css += `#${id} > .ladi-image > .ladi-image-background{background-image: url("${encodeURI(anh)}"); top: 0; left: 0; width: 100%; height: 100%; background-position: center center;}\n`;
+    css += `#${id} > .ladi-image > .ladi-image-background{background-image: url("${encodeURI(anh)}"); top: 0; left: 0; width: 100%; height: 100%; background-position: ${VI_TRI_ANH[id] || 'center center'};}\n`;
   }
   for (const [nhan, id] of Object.entries(O_QR)) {
     const anh = lay(nhan);
     kiemTraFile(anh, nhan);
     css += `#${id} > .ladi-image > .ladi-image-background{background-image: url("${encodeURI(anh)}"); top: 0; left: 0; width: 100%; height: 100%; background-size: contain; background-position: center center;}\n`;
   }
-  if (/^(không|khong|ko|no|0|ẩn)$/i.test(lay('Hiện nút quà nổi (có/không)'))) {
+  if (laKhong(lay('Hiện nút gửi lời chúc (có/không)'))) {
+    // bỏ nút, kéo nút "Gửi Mừng Cưới" lên và thu khung trắng cho gọn
+    css += '#BUTTON12 {display: none !important;}\n#BUTTON9 {top: 2448.56px;}\n#BOX18 {height: 250px;}\n';
+  }
+  if (laKhong(lay('Hiện nút quà nổi (có/không)'))) {
     css += '#gift-icon, #qr-popup {display: none !important;}\n';
   }
   return css;
@@ -243,7 +251,18 @@ function moMayChu(cong) {
     let file = path.join(RA, path.normalize(p).replace(/^(\.\.[\\/])+/, ''));
     if (fs.existsSync(file) && fs.statSync(file).isDirectory()) file = path.join(file, 'index.html');
     if (!file.startsWith(RA) || !fs.existsSync(file)) file = path.join(RA, 'index.html'); // link tuỳ ý -> thiệp
-    res.writeHead(200, { 'Content-Type': KIEU[path.extname(file).toLowerCase()] || 'application/octet-stream', 'Cache-Control': 'no-store' });
+    const dau = { 'Content-Type': KIEU[path.extname(file).toLowerCase()] || 'application/octet-stream', 'Cache-Control': 'no-store', 'Accept-Ranges': 'bytes' };
+    const tong = fs.statSync(file).size;
+    // Trình duyệt (nhất là Safari/iPhone) xin nhạc/video theo từng đoạn bằng "Range"
+    const range = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range || '');
+    if (range && (range[1] || range[2])) {
+      let bd = range[1] ? Number(range[1]) : Math.max(0, tong - Number(range[2]));
+      let kt = range[1] && range[2] ? Math.min(Number(range[2]), tong - 1) : tong - 1;
+      if (bd > kt || bd >= tong) { res.writeHead(416, { 'Content-Range': `bytes */${tong}` }); return res.end(); }
+      res.writeHead(206, { ...dau, 'Content-Range': `bytes ${bd}-${kt}/${tong}`, 'Content-Length': kt - bd + 1 });
+      return fs.createReadStream(file, { start: bd, end: kt }).pipe(res);
+    }
+    res.writeHead(200, { ...dau, 'Content-Length': tong });
     fs.createReadStream(file).pipe(res);
   }).listen(cong, () => {
     console.log(`\n🌐 Xem thiệp:      http://localhost:${cong}/`);

@@ -15,30 +15,30 @@ Sửa nội dung thiệp tại đây, sau đó chạy `npm run build` (hoặc đ
 
 ## 1. Thông tin trang (hiện khi gửi link qua Zalo, Messenger, Facebook…)
 
-- Tiêu đề trang: 💍 Thiệp cưới Tuấn Anh & Thảo Anh 💕
-- Mô tả khi chia sẻ: 19 - 10 - 2026
+- Tiêu đề trang: 💍 Thiệp cưới Thế Anh & Lan Hương 💕
+- Mô tả khi chia sẻ: 16 - 11 - 2026
 - Ảnh khi chia sẻ: anh/chia-se/anh-chia-se.jpg
 - Biểu tượng trang (favicon): anh/trang-tri/favicon.png
 
 ## 2. Phần đầu trang (Save The Date)
 
 - Chữ Save The Date: Save The Date
-- Tên chú rể: Tuấn Anh
-- Tên cô dâu: Thảo Anh
-- Đầu trang - giờ và thứ: 11:00 | Chủ Nhật
-- Đầu trang - ngày và tháng: 26.02
+- Tên chú rể: Chu Thế Anh
+- Tên cô dâu: Trần Lan Hương
+- Đầu trang - giờ và thứ: 11:30 | Thứ Hai
+- Đầu trang - ngày và tháng: 16.11
 - Đầu trang - năm: 20 | 26
-- Đầu trang - ngày âm lịch: ( Tức Ngày 10 Tháng 01 Năm Bính Ngọ )
+- Đầu trang - ngày âm lịch: ( Tức Ngày 08 Tháng 10 Năm Bính Ngọ )
 
 ## 3. Câu thơ và gia đình hai bên
 
-- Câu thơ: Hôn nhân là chuyện cả đời , | Yêu người vừa ý , cưới người mình thương ...
+- Câu thơ: Sự hiện diện của Quý khách | là niềm vinh hạnh cho gia đình chúng tôi!
 - Nhà trai - tiêu đề: Nhà Trai
-- Nhà trai - bố mẹ: Ông Tống Đình Quý | Bà Vũ Hoài Vân
-- Nhà trai - địa chỉ: 106 Lê Lợi -  Đề Thám | TP.  Thái Bình
+- Nhà trai - bố mẹ: Chu Thế Thỏa | Chu Thị Tâm
+- Nhà trai - địa chỉ:
 - Nhà gái - tiêu đề: Nhà Gái
-- Nhà gái - bố mẹ: Ông Vũ Tuấn Anh | Bà Vũ Thị Hoa
-- Nhà gái - địa chỉ: Quang Khải - Tứ Kỳ | Hải Dương
+- Nhà gái - bố mẹ: Trần Văn Cảnh | Phùng Thị Hiểu
+- Nhà gái - địa chỉ: Xóm Mới, Thôn Viên Châu | Xã Cổ Đô, TP. Hà Nội
 - Chữ Chú Rể: Chú Rể
 - Chữ Cô Dâu: Cô Dâu
 
@@ -47,50 +47,51 @@ Sửa nội dung thiệp tại đây, sau đó chạy `npm run build` (hoặc đ
 Dòng "khách mời" sẽ tự đổi thành tên khách nếu link có tên khách (tạo ở trang `tao-link`).
 
 - Thư mời - tiêu đề: Thư Mời
-- Thư mời - khách mời mặc định: Bạn Thảo Anh
-- Thư mời - lời mời: THAM DỰ LỄ CƯỚI CỦA TUẤN ANH & THẢO ANH
+- Thư mời - khách mời mặc định: Quý Khách
+- Thư mời - lời mời: THAM DỰ LỄ CƯỚI CỦA THẾ ANH & LAN HƯƠNG
 
 ## 5. Lễ thành hôn
 
-- Lễ thành hôn - tiêu đề: LỄ THÀNH HÔN
-- Lễ thành hôn - giờ và thứ: Vào Lúc 14:00 \| Chủ Nhật
-- Lễ thành hôn - ô bên trái: 16 giờ 30
-- Lễ thành hôn - ngày: 19
+- Lễ thành hôn - tiêu đề: LỄ VU QUY
+- Lễ thành hôn - giờ và thứ: Vào Lúc 11 giờ 30
+- Lễ thành hôn - ô bên trái: Thứ Hai
+- Lễ thành hôn - ngày: 16
 - Lễ thành hôn - ô bên phải: Năm 2026
-- Lễ thành hôn - tháng: Tháng 10
-- Lễ thành hôn - âm lịch: ( Tức Ngày 28 Tháng 08 Năm Bính Ngọ.)
+- Lễ thành hôn - tháng: Tháng 11
+- Lễ thành hôn - âm lịch: ( Tức Ngày 08 Tháng 10 Năm Bính Ngọ.)
 
 ## 6. Tiệc cưới (khung trắng có 2 nút)
 
-- Tiệc cưới - tiêu đề: TIỆC CƯỚI NHÀ TRAI
-- Tiệc cưới - giờ và thứ: 11:00 – Chủ Nhật
-- Tiệc cưới - ngày: 19/10/2026
-- Tiệc cưới - âm lịch: (Tức ngày 11 tháng 02 năm Bính Ngọ.)
-- Tiệc cưới - địa điểm: Tại Adora Center – Phú Nhuận
+- Tiệc cưới - tiêu đề: BỮA CƠM THÂN MẬT
+- Tiệc cưới - giờ và thứ: 17:00 – Chủ Nhật
+- Tiệc cưới - ngày: 15/11/2026
+- Tiệc cưới - âm lịch: (Tức ngày 07 tháng 10 năm Bính Ngọ.)
+- Tiệc cưới - địa điểm: Tại Tư Gia – Xã Cổ Đô, Hà Nội
 - Nút gửi lời chúc: Gửi Lời Chúc Phúc
+- Hiện nút gửi lời chúc (có/không): không
 - Nút gửi mừng cưới: Gửi Mừng Cưới
 
 ## 7. Lịch (tự vẽ theo tháng/năm, trái tim đánh dấu ngày cưới)
 
-- Lịch - tháng: 3
+- Lịch - tháng: 11
 - Lịch - năm: 2026
-- Lịch - ngày đánh dấu: 20
+- Lịch - ngày đánh dấu: 16
 
 ## 8. Địa điểm tổ chức (khung hồng có bản đồ)
 
 Bản đồ: để trống thì tự tìm theo "Địa điểm - địa chỉ". Muốn chính xác hơn: mở Google Maps → chọn địa điểm → Chia sẻ → Nhúng bản đồ → sao chép link trong `src="..."` rồi dán vào đây.
 
 - Địa điểm - tiêu đề: Địa điểm tổ chức
-- Địa điểm - tên: Tư Gia Nhà Trai
-- Địa điểm - địa chỉ: Thôn Phù Ích , xã Đông Kinh , tỉnh Hà Tĩnh.
-- Địa điểm - bản đồ: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4859.876633979642!2d106.71631368512836!3d11.004161227014883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174da872fc907bd%3A0xdf79c601e191387a!2zVHLGsOG7nW5nIFRp4buDdSBo4buNYyBUw6JuIFBoxrDhu5tjIEtow6FuaCBB!5e1!3m2!1svi!2s!4v1756973888803!5m2!1svi!2s
+- Địa điểm - tên: Tư Gia Nhà Gái
+- Địa điểm - địa chỉ: Xóm Mới, Thôn Viên Châu, | Xã Cổ Đô, TP. Hà Nội.
+- Địa điểm - bản đồ:
 
 ## 9. Album, lời cảm ơn, chân trang
 
 - Album - tiêu đề: Album ảnh cưới
 - Cảm ơn - dòng 1: Thank You
 - Cảm ơn - dòng 2: Rất hân hạnh đón tiếp
-- Chân trang: THIỆP CƯỚI TUẤN ANH & THẢO ANH
+- Chân trang: THIỆP CƯỚI THẾ ANH & LAN HƯƠNG
 
 ## 10. Popup "Gửi lời chúc phúc"
 
@@ -107,7 +108,7 @@ Lời chúc được lưu vào Google Sheet nếu điền link bên dưới (cá
 
 ## 11. Mừng cưới (popup "Gửi Mừng Cưới" và nút quà 🎁 nổi góc phải)
 
-⚠️ Nhớ thay thông tin tài khoản và ảnh QR của bạn (ảnh để trong `anh/mung-cuoi/`). Nút quà 🎁 dùng **Tài khoản 1**.
+⚠️ Nhớ thay thông tin tài khoản và ảnh QR của bạn (ảnh để trong `anh/mung-cuoi/`). Nút quà 🎁 hiện cả **Tài khoản 1** và **Tài khoản 2**.
 
 - Mừng cưới - lời nhắn: Chân thành cảm ơn mọi người đã  gửi lời chúc phúc trong ngày trọng đại của chúng mình. Bạn hãy để lại nội dung: Tên + mối quan hệ để chúng mình biết nha.
 - Tài khoản 1 - ngân hàng: TÊN NGÂN HÀNG
