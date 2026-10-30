@@ -17,7 +17,7 @@ Sửa nội dung thiệp tại đây, sau đó chạy `npm run build` (hoặc đ
 
 - Tiêu đề trang: 💍 Thiệp cưới Thế Anh & Lan Hương 💕
 - Mô tả khi chia sẻ: 16 - 11 - 2026
-- Ảnh khi chia sẻ: anh/chia-se/anh-chia-se.jpg
+- Ảnh khi chia sẻ: anh/anh-cuoi/01-anh-bia.jpg
 - Biểu tượng trang (favicon): anh/trang-tri/favicon.png
 
 ## 2. Phần đầu trang (Save The Date)
@@ -167,4 +167,4 @@ Cách đơn giản nhất: **chép ảnh mới đè lên file cũ, giữ nguyên
 Đường dẫn gốc: để `/` nếu thiệp nằm ở tên miền riêng (vd. `https://thiepcuoi.vn/`). Nếu dùng GitHub Pages dạng `https://ten.github.io/ten-repo/` thì điền `/ten-repo/`.
 
 - Đường dẫn gốc: /
-- Địa chỉ website: https://ten-mien-cua-ban.vn
+- Địa chỉ website: https://the-anh-lan-huong.netlify.app

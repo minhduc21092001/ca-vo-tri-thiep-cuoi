@@ -11,7 +11,6 @@ ca-vo-tri/
 │   ├── anh-cuoi/          ảnh cưới ở các vị trí cố định (bìa, cạnh nhà trai/gái, thư mời, lịch…)
 │   ├── album/             13 ảnh của phần "Album ảnh cưới", 01.jpg → 13.jpg
 │   ├── mung-cuoi/         ảnh QR ngân hàng (tài khoản 1, tài khoản 2)
-│   ├── chia-se/           ảnh hiện khi gửi link qua Zalo/Messenger
 │   └── trang-tri/         hoa văn, nền, chibi, cửa mở đầu trang… (ít khi cần đổi)
 ├── nhac/nhac-nen.mp3      ← 🎵 nhạc nền
 ├── google-sheet/          ← lưu lời chúc của khách vào Google Sheet (xem HUONG-DAN.md trong đó)

@@ -168,6 +168,22 @@ function chuanHoaGoc(goc) {
   return goc;
 }
 
+// Đọc kích thước ảnh JPEG/PNG từ phần đầu file (không cần thư viện) để khai báo cho Zalo/Facebook
+function kichThuocAnh(duongDan) {
+  try {
+    const b = fs.readFileSync(path.join(GOC, decodeURI(duongDan)));
+    if (b.readUInt32BE(0) === 0x89504e47) return { rong: b.readUInt32BE(16), cao: b.readUInt32BE(20) };
+    let i = 2;
+    while (i < b.length) {
+      if (b[i] !== 0xff) { i++; continue; }
+      const loai = b[i + 1];
+      if (loai >= 0xc0 && loai <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(loai)) return { rong: b.readUInt16BE(i + 7), cao: b.readUInt16BE(i + 5) };
+      i += 2 + b.readUInt16BE(i + 2);
+    }
+  } catch (e) { /* bỏ qua: chỉ là thông tin phụ */ }
+  return null;
+}
+
 function diaChiDayDu(lay, duongDan) {
   if (!duongDan || laLinkNgoai(duongDan)) return duongDan;
   const web = lay('Địa chỉ website').replace(/\/+$/, '');
@@ -202,6 +218,12 @@ function build() {
   const tinhSan = {
     '@duong-dan-goc': escAttr(goc),
     '@anh-chia-se': escAttr(diaChiDayDu(lay, lay('Ảnh khi chia sẻ'))),
+    '@anh-chia-se-kich-thuoc': (() => {
+      const f = lay('Ảnh khi chia sẻ');
+      const k = f && !laLinkNgoai(f) && kichThuocAnh(f);
+      return k ? `<meta property="og:image:width" content="${k.rong}">
+<meta property="og:image:height" content="${k.cao}">` : '';
+    })(),
     '@css-anh': '\n' + taoCssAnh(lay),
     '@ban-do': escAttr(taoBanDo(lay)),
     '@lua-chon-tham-du': luaChon,
