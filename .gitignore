@@ -1,6 +1,8 @@
 # Thư mục được tạo ra bởi `npm run build`
 website/
 node_modules/
+# Link ngắn tạo khi xem thử trên máy (trên Netlify lưu ở Netlify Blobs)
+lien-ket.local.json
 
 # Ảnh/tài liệu cá nhân không dùng cho thiệp (giữ trên máy, không đưa lên repo)
 THE ANH - LAN HUONG/

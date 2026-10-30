@@ -7,6 +7,9 @@
     "build": "node build.js",
     "dev": "node build.js --serve"
   },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.7"
+  },
   "engines": {
     "node": ">=18"
   }

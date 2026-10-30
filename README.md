@@ -45,11 +45,13 @@ ca-vo-tri/
 
 ## Tạo link cho khách
 
-Mở trang `…/tao-link/` trên website của bạn:
+Mở trang `…/tao-link/` trên website của bạn, điền rồi bấm **Tạo link**:
 
-- **Tiêu đề link**: gõ gì cũng được, ví dụ "Mời anh Minh và gia đình" → link `https://ten-mien.vn/moi-anh-minh-va-gia-dinh`. Mọi link đều mở cùng một tấm thiệp.
-- **Tên khách mời** (không bắt buộc): hiện thay cho dòng "Bạn Thảo Anh" dưới chữ "Thư Mời".
-- Bấm **Sao chép link** để gửi, **Lưu vào danh sách** để giữ lại (danh sách chỉ lưu trên trình duyệt bạn đang dùng).
+- **Tiêu đề link**: ví dụ "Anh Minh và gia đình" → link ngắn `https://ten-mien.vn/anh-minh-va-gia-dinh`. Khi gửi qua Zalo/Messenger, khung xem trước hiện "💍 Thiệp cưới … – **Mời** Anh Minh và gia đình" (nếu bạn đã gõ chữ "Mời" ở đầu thì không lặp lại). Mọi link đều mở cùng một tấm thiệp.
+- **Tên khách mời** (không bắt buộc): hiện ở dòng dưới chữ "Thư Mời" và trên màn hình mở thiệp.
+- Link vừa tạo tự lưu vào danh sách bên dưới (danh sách chỉ lưu trên trình duyệt bạn đang dùng).
+
+Link ngắn hoạt động nhờ `netlify/edge-functions/link-ngan.js`: máy chủ Netlify nhớ tiêu đề và tên khách của từng link (lưu trong Netlify Blobs) để chèn vào thiệp. Vì vậy cần **deploy qua Git trên Netlify** (kéo thả thư mục `website/` sẽ không có chức năng này, trang tạo link sẽ tạm dùng link dài có `?khach=...`). Muốn chỉ mình bạn tạo được link: vào Netlify → *Site configuration → Environment variables*, thêm biến `MAT_KHAU_TAO_LINK` với mật khẩu tuỳ chọn; trang tạo link sẽ hỏi mật khẩu ở lần đầu.
 
 ## Đăng lên mạng
 

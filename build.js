@@ -270,9 +270,53 @@ const KIEU = {
   '.ttf': 'font/ttf', '.otf': 'font/otf', '.woff': 'font/woff', '.woff2': 'font/woff2',
 };
 
+// Link ngắn khi xem thử trên máy: giống Netlify Edge Function nhưng lưu vào file thay cho Netlify Blobs
+const FILE_LIEN_KET = path.join(GOC, 'lien-ket.local.json');
+const khoLienKet = {
+  doc: () => { try { return JSON.parse(fs.readFileSync(FILE_LIEN_KET, 'utf8')); } catch (e) { return {}; } },
+  get: async (khoa) => khoLienKet.doc()[khoa] || null,
+  set: async (khoa, giaTri) => {
+    const tatCa = khoLienKet.doc();
+    tatCa[khoa] = giaTri;
+    fs.writeFileSync(FILE_LIEN_KET, JSON.stringify(tatCa, null, 2));
+  },
+};
+let lienKet = null; // module netlify/chung/lien-ket.mjs (ESM) nạp khi máy chủ khởi động
+const traJson = (res, trangThai, duLieu) => {
+  res.writeHead(trangThai, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' });
+  res.end(JSON.stringify(duLieu));
+};
+
+async function xuLyLinkNgan(req, res, p) {
+  if (p === '/api/tao-link') {
+    if (req.method !== 'POST') return traJson(res, 405, { loi: 'Chỉ nhận POST.' }), true;
+    const phan = [];
+    for await (const chunk of req) phan.push(chunk);
+    const raw = Buffer.concat(phan).toString('utf8');
+    let body = {};
+    try { body = JSON.parse(raw || '{}'); } catch (e) { return traJson(res, 400, { loi: 'Dữ liệu không hợp lệ.' }), true; }
+    const kq = await lienKet.taoLinkMoi(khoLienKet, body, process.env.MAT_KHAU_TAO_LINK);
+    traJson(res, kq.trangThai, kq.duLieu);
+    return true;
+  }
+  const duongDan = lienKet.layDuongDan(p);
+  const duLieu = duongDan && !fs.existsSync(path.join(RA, duongDan)) && (await khoLienKet.get(duongDan));
+  if (!duLieu) return false;
+  const html = lienKet.chenThongTin(fs.readFileSync(path.join(RA, 'index.html'), 'utf8'), duLieu);
+  res.writeHead(200, { 'Content-Type': KIEU['.html'], 'Cache-Control': 'no-store' });
+  res.end(html);
+  return true;
+}
+
 function moMayChu(cong) {
-  http.createServer((req, res) => {
+  http.createServer(async (req, res) => {
     let p = decodeURIComponent(new URL(req.url, 'http://x').pathname);
+    try {
+      if (await xuLyLinkNgan(req, res, p)) return;
+    } catch (e) {
+      console.error('❌ Link ngắn: ' + e.message);
+      return traJson(res, 500, { loi: e.message });
+    }
     let file = path.join(RA, path.normalize(p).replace(/^(\.\.[\\/])+/, ''));
     if (fs.existsSync(file) && fs.statSync(file).isDirectory()) file = path.join(file, 'index.html');
     if (!file.startsWith(RA) || !fs.existsSync(file)) file = path.join(RA, 'index.html'); // link tuỳ ý -> thiệp
@@ -317,6 +361,9 @@ try {
   if (!process.argv.includes('--serve')) process.exit(1);
 }
 if (process.argv.includes('--serve')) {
-  moMayChu(Number(process.env.PORT) || 8080);
-  theoDoi();
+  import(require('url').pathToFileURL(path.join(GOC, 'netlify/chung/lien-ket.mjs')).href).then((m) => {
+    lienKet = m;
+    moMayChu(Number(process.env.PORT) || 8080);
+    theoDoi();
+  });
 }
