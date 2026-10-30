@@ -1,0 +1,7 @@
+# Thư mục được tạo ra bởi `npm run build`
+website/
+node_modules/
+
+# Ảnh/tài liệu cá nhân không dùng cho thiệp (giữ trên máy, không đưa lên repo)
+THE ANH - LAN HUONG/
+THE ANH - LAN HUONG-*.zip

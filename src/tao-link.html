@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tạo link thiệp cưới</title>
+<link rel="icon" href="../{{url:Biểu tượng trang (favicon)}}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Allura&display=swap">
+<style>
+  :root { --hong: #e0679f; --hong-nhat: #fdf0f6; --chu: #3b2f35; --vien: #ecd3df; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; font-family: Quicksand, system-ui, sans-serif; color: var(--chu);
+    background: linear-gradient(160deg, #fff7fb 0%, #fbe7f0 100%);
+    display: flex; justify-content: center; padding: 32px 16px;
+  }
+  main { width: 100%; max-width: 560px; }
+  h1 { font-family: Allura, cursive; font-weight: 400; font-size: 52px; text-align: center; margin: 0; color: var(--hong); }
+  .phu { text-align: center; margin: 0 0 24px; opacity: .75; }
+  .the {
+    background: #fff; border: 1px solid var(--vien); border-radius: 18px; padding: 22px;
+    box-shadow: 0 10px 30px rgba(224, 103, 159, .12); margin-bottom: 18px;
+  }
+  label { display: block; font-weight: 700; margin: 0 0 6px; }
+  label small { font-weight: 400; opacity: .7; }
+  input {
+    width: 100%; padding: 12px 14px; border: 1px solid var(--vien); border-radius: 12px;
+    font: inherit; color: inherit; margin-bottom: 16px; background: #fffafc;
+  }
+  input:focus { outline: 2px solid var(--hong); border-color: transparent; }
+  .ket-qua {
+    display: flex; gap: 8px; align-items: center; background: var(--hong-nhat); border-radius: 12px;
+    padding: 10px 12px; word-break: break-all; font-weight: 600; min-height: 46px;
+  }
+  .ket-qua span { flex: 1; }
+  .ket-qua.trong { color: #a58b98; font-weight: 400; }
+  .nut-hang { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+  button, .nut {
+    border: 0; border-radius: 12px; padding: 11px 16px; font: inherit; font-weight: 700; cursor: pointer;
+    background: var(--hong); color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+  }
+  button.phu-nut, .nut.phu-nut { background: #fff; color: var(--hong); border: 1px solid var(--hong); }
+  button:disabled, .nut[aria-disabled=true] { opacity: .45; pointer-events: none; }
+  .canh-bao { color: #b45309; font-size: 14px; margin: -8px 0 14px; display: none; }
+  h2 { font-size: 18px; margin: 0 0 12px; display: flex; justify-content: space-between; align-items: center; }
+  h2 button { padding: 6px 10px; font-size: 13px; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { border-top: 1px dashed var(--vien); padding: 10px 0; display: flex; gap: 8px; align-items: center; }
+  li:first-child { border-top: 0; }
+  li .tt { flex: 1; min-width: 0; }
+  li .tt b { display: block; }
+  li .tt a { color: var(--chu); opacity: .7; font-size: 13px; word-break: break-all; }
+  li button { padding: 7px 10px; font-size: 13px; }
+  .trong-rong { opacity: .6; font-size: 14px; }
+  .thong-bao {
+    position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%) translateY(20px); opacity: 0;
+    background: var(--chu); color: #fff; padding: 10px 18px; border-radius: 999px; transition: .25s; pointer-events: none;
+  }
+  .thong-bao.hien { opacity: 1; transform: translateX(-50%); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tạo link thiệp cưới</h1>
+  <p class="phu">Mọi link tạo ở đây đều mở cùng một tấm thiệp.</p>
+
+  <section class="the">
+    <label for="tieu-de">Tiêu đề link</label>
+    <input id="tieu-de" placeholder="Ví dụ: Mời anh Minh và gia đình" autocomplete="off" autofocus>
+    <p class="canh-bao" id="canh-bao"></p>
+
+    <label for="khach">Tên khách mời <small>(không bắt buộc, hiện ở dòng “Thư Mời” trên thiệp)</small></label>
+    <input id="khach" placeholder="Ví dụ: Anh Minh" autocomplete="off">
+
+    <label for="web">Địa chỉ website thiệp</label>
+    <input id="web" value="{{@dia-chi-website}}" autocomplete="off">
+
+    <div class="ket-qua trong" id="ket-qua"><span>Link sẽ hiện ở đây…</span></div>
+    <div class="nut-hang">
+      <button id="nut-chep" disabled>📋 Sao chép link</button>
+      <a class="nut phu-nut" id="nut-mo" target="_blank" rel="noopener" aria-disabled="true">👀 Mở thử</a>
+      <button class="phu-nut" id="nut-luu" disabled>💾 Lưu vào danh sách</button>
+    </div>
+  </section>
+
+  <section class="the">
+    <h2>Link đã lưu <button class="phu-nut" id="nut-xoa-het" hidden>Xoá hết</button></h2>
+    <ul id="danh-sach"></ul>
+    <p class="trong-rong" id="trong-rong">Chưa có link nào. Danh sách chỉ lưu trên trình duyệt này.</p>
+  </section>
+</main>
+<div class="thong-bao" id="thong-bao"></div>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var KHOA_LUU = 'thiep-cuoi-link-da-tao';
+  // Tên thư mục có thật trong website/ — không dùng làm link để tránh trùng
+  var TEN_DANH_RIENG = ['anh', 'css', 'js', 'fonts', 'nhac', 'tao-link', 'index', '404'];
+
+  // Lần đầu mở trên website thật: lấy luôn địa chỉ đang chạy
+  var web = $('web');
+  if (/ten-mien-cua-ban/.test(web.value) && /^https?:$/.test(location.protocol)) {
+    web.value = location.href.replace(/tao-link\/?(index\.html)?([?#].*)?$/, '');
+  }
+
+  function boDau(s) {
+    return s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D');
+  }
+  function taoDuongDan(tieuDe) {
+    var s = boDau(tieuDe).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80);
+    if (TEN_DANH_RIENG.indexOf(s) >= 0) s += '-1';
+    return s;
+  }
+  function taoLink() {
+    var tieuDe = $('tieu-de').value.trim();
+    var duongDan = taoDuongDan(tieuDe);
+    var khach = $('khach').value.trim();
+    var goc = web.value.trim().replace(/\/*$/, '/');
+    if (!duongDan) return null;
+    return {
+      tieuDe: tieuDe, khach: khach,
+      link: goc + duongDan + (khach ? '?khach=' + encodeURIComponent(khach) : ''),
+    };
+  }
+
+  var hienTai = null;
+  function capNhat() {
+    hienTai = taoLink();
+    var kq = $('ket-qua'), cb = $('canh-bao');
+    kq.classList.toggle('trong', !hienTai);
+    kq.firstElementChild.textContent = hienTai ? hienTai.link : 'Link sẽ hiện ở đây…';
+    cb.style.display = $('tieu-de').value.trim() && !hienTai ? 'block' : 'none';
+    cb.textContent = 'Tiêu đề cần có ít nhất một chữ cái hoặc chữ số.';
+    $('nut-chep').disabled = $('nut-luu').disabled = !hienTai;
+    var mo = $('nut-mo');
+    mo.setAttribute('aria-disabled', String(!hienTai));
+    if (hienTai) mo.href = hienTai.link; else mo.removeAttribute('href');
+  }
+
+  function thongBao(chu) {
+    var tb = $('thong-bao');
+    tb.textContent = chu;
+    tb.classList.add('hien');
+    clearTimeout(thongBao.hen);
+    thongBao.hen = setTimeout(function () { tb.classList.remove('hien'); }, 1800);
+  }
+  function chep(chu) {
+    var xong = function () { thongBao('Đã sao chép link!'); };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(chu).then(xong, function () { chepCu(chu); xong(); });
+    } else { chepCu(chu); xong(); }
+  }
+  function chepCu(chu) {
+    var t = document.createElement('textarea');
+    t.value = chu; document.body.appendChild(t); t.select();
+    document.execCommand('copy'); document.body.removeChild(t);
+  }
+
+  function docDanhSach() {
+    try { return JSON.parse(localStorage.getItem(KHOA_LUU)) || []; } catch (e) { return []; }
+  }
+  function ghiDanhSach(ds) {
+    localStorage.setItem(KHOA_LUU, JSON.stringify(ds));
+    veDanhSach();
+  }
+  function veDanhSach() {
+    var ds = docDanhSach(), ul = $('danh-sach');
+    ul.innerHTML = '';
+    ds.forEach(function (muc, i) {
+      var li = document.createElement('li');
+      var tt = document.createElement('div'); tt.className = 'tt';
+      var b = document.createElement('b'); b.textContent = muc.tieuDe + (muc.khach ? ' — ' + muc.khach : '');
+      var a = document.createElement('a'); a.href = muc.link; a.target = '_blank'; a.rel = 'noopener'; a.textContent = muc.link;
+      tt.appendChild(b); tt.appendChild(a);
+      var chepBtn = document.createElement('button'); chepBtn.textContent = 'Sao chép';
+      chepBtn.onclick = function () { chep(muc.link); };
+      var xoa = document.createElement('button'); xoa.className = 'phu-nut'; xoa.textContent = 'Xoá';
+      xoa.onclick = function () { ds.splice(i, 1); ghiDanhSach(ds); };
+      li.appendChild(tt); li.appendChild(chepBtn); li.appendChild(xoa);
+      ul.appendChild(li);
+    });
+    $('trong-rong').hidden = ds.length > 0;
+    $('nut-xoa-het').hidden = ds.length === 0;
+  }
+
+  ['tieu-de', 'khach', 'web'].forEach(function (id) { $(id).addEventListener('input', capNhat); });
+  $('nut-chep').onclick = function () { if (hienTai) chep(hienTai.link); };
+  $('nut-luu').onclick = function () {
+    if (!hienTai) return;
+    var ds = docDanhSach().filter(function (m) { return m.link !== hienTai.link; });
+    ds.unshift(hienTai);
+    ghiDanhSach(ds);
+    thongBao('Đã lưu!');
+  };
+  $('tieu-de').addEventListener('keydown', function (e) { if (e.key === 'Enter' && hienTai) chep(hienTai.link); });
+  $('nut-xoa-het').onclick = function () { if (confirm('Xoá toàn bộ danh sách link đã lưu?')) ghiDanhSach([]); };
+
+  capNhat();
+  veDanhSach();
+})();
+</script>
+</body>
+</html>

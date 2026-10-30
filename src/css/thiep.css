@@ -1,0 +1,326 @@
+/* Vị trí, kích thước, màu sắc, phông chữ của từng phần tử trên thiệp. */
+@font-face {font-family: "FZ Alpha Brights"; src: url("../fonts/fz-alpha-brights.otf") format("opentype"); font-display: swap;}
+@font-face {font-family: "DFVN ED Drayton"; src: url("../fonts/dfvn-ed-drayton.otf") format("opentype"); font-display: swap;}
+@font-face {font-family: "Lora Thiep"; src: url("../fonts/lora-regular.ttf") format("truetype"); font-display: swap;}
+@font-face {font-family: "SVN Saudagar"; src: url("../fonts/svn-saudagar.otf") format("opentype"); font-display: swap;}
+@font-face {font-family: "Great Vibes Thiep"; src: url("../fonts/greatvibes-regular.ttf") format("truetype"); font-display: swap;}
+@font-face {font-family: "FZ Photograph"; src: url("../fonts/fz-photograph.ttf") format("truetype"); font-display: swap;}
+@font-face {font-family: "1FTV VIP Hastegi"; src: url("../fonts/1ftv-vip-hastegi.otf") format("opentype"); font-display: swap;}
+body {direction: ltr;}
+.ladi-wraper {margin: 0 auto; width: 420px;}
+body {font-family: "Open Sans", sans-serif}
+
+#SECTION1{height: 6439.7px;}
+#GROUP110{width: 418.627px; height: 3354px;top: 664.001px; left: 0px;}
+#GROUP106,#GROUP107{width: 418.627px; height: 1677px;}
+#GROUP106,#GROUP104,#IMAGE118,#IMAGE118 > .ladi-image > .ladi-image-background,#IMAGE119 > .ladi-image > .ladi-image-background,#IMAGE120,#IMAGE120 > .ladi-image > .ladi-image-background,#IMAGE121 > .ladi-image > .ladi-image-background,#GROUP108,#IMAGE122,#IMAGE122 > .ladi-image > .ladi-image-background,#IMAGE123 > .ladi-image > .ladi-image-background,#IMAGE124,#IMAGE124 > .ladi-image > .ladi-image-background,#IMAGE125 > .ladi-image > .ladi-image-background,#HTML_CODE4,#IMAGE94 > .ladi-image > .ladi-image-background,#IMAGE95 > .ladi-image > .ladi-image-background,#IMAGE96 > .ladi-image > .ladi-image-background,#IMAGE97 > .ladi-image > .ladi-image-background,#IMAGE98 > .ladi-image > .ladi-image-background,#IMAGE99 > .ladi-image > .ladi-image-background,#IMAGE101 > .ladi-image > .ladi-image-background,#IMAGE102 > .ladi-image > .ladi-image-background,#IMAGE104 > .ladi-image > .ladi-image-background,#IMAGE105 > .ladi-image > .ladi-image-background,#IMAGE106 > .ladi-image > .ladi-image-background,#IMAGE107 > .ladi-image > .ladi-image-background,#BOX7,#IMAGE7 > .ladi-image > .ladi-image-background,#IMAGE8 > .ladi-image > .ladi-image-background,#IMAGE9 > .ladi-image > .ladi-image-background,#IMAGE2 > .ladi-image > .ladi-image-background,#BOX13,#IMAGE110 > .ladi-image > .ladi-image-background,#HTML_CODE8,#GROUP37,#IMAGE86,#IMAGE111 > .ladi-image > .ladi-image-background,#BOX16,#HEADLINE198,#HEADLINE205,#HEADLINE212,#HEADLINE220,#HEADLINE225,#IMAGE112 > .ladi-image > .ladi-image-background,#HEADLINE232,#IMAGE5 > .ladi-image > .ladi-image-background,#IMAGE6 > .ladi-image > .ladi-image-background,#IMAGE73 > .ladi-image > .ladi-image-background,#IMAGE74 > .ladi-image > .ladi-image-background,#POPUP2,#GROUP18,#POPUP3,#BOX10,#POPUP4{top: 0px; left: 0px;}
+#GROUP104,#GROUP105,#GROUP108,#GROUP109{width: 418.627px; height: 838.503px;}
+#IMAGE118,#IMAGE118 > .ladi-image > .ladi-image-background,#IMAGE119,#IMAGE119 > .ladi-image > .ladi-image-background,#IMAGE120,#IMAGE120 > .ladi-image > .ladi-image-background,#IMAGE121,#IMAGE121 > .ladi-image > .ladi-image-background,#IMAGE122,#IMAGE122 > .ladi-image > .ladi-image-background,#IMAGE123,#IMAGE123 > .ladi-image > .ladi-image-background,#IMAGE124,#IMAGE124 > .ladi-image > .ladi-image-background,#IMAGE125,#IMAGE125 > .ladi-image > .ladi-image-background{width: 417.583px; height: 419.253px;}
+#IMAGE118 > .ladi-image > .ladi-image-background,#IMAGE119 > .ladi-image > .ladi-image-background,#IMAGE120 > .ladi-image > .ladi-image-background,#IMAGE121 > .ladi-image > .ladi-image-background,#IMAGE122 > .ladi-image > .ladi-image-background,#IMAGE123 > .ladi-image > .ladi-image-background,#IMAGE124 > .ladi-image > .ladi-image-background,#IMAGE125 > .ladi-image > .ladi-image-background{background-image: url("../anh/trang-tri/nen-giay.jpg");}
+#IMAGE119,#IMAGE121,#IMAGE123,#IMAGE125{top: 419.25px; left: 1.044px;}
+#GROUP105,#GROUP109{top: 838.499px; left: 0px;}
+#GROUP107{top: 1677px; left: 0px;}
+#LINE4,#HEADLINE246,#HEADLINE247{width: 181px;}
+#LINE4{top: 3652.87px; left: 204.012px;}
+#LINE4 > .ladi-line > .ladi-line-container{border-top: 2px solid rgb(0, 0, 0); border-right: 2px solid rgb(0, 0, 0); border-bottom: 2px solid rgb(0, 0, 0); border-left: 0px !important;}
+#LINE4 > .ladi-line,#LINE3 > .ladi-line,#LINE11 > .ladi-line,#LINE16 > .ladi-line{width: 100%;padding: 8px 0px;}
+#IMAGE25{width: 132.519px; height: 50.6004px;top: 3607.5px; left: 238.148px;}
+#IMAGE25 > .ladi-image > .ladi-image-background{width: 132.519px; height: 98.6004px;top: -17px; left: 0px;background-image: url("../anh/trang-tri/trai-tim-album.png");}
+#IMAGE25 > .ladi-image{transform: rotate(3deg);}
+#IMAGE25:hover > .ladi-image{transform: rotate(0deg); opacity: 1;}
+#HEADLINE21,#HEADLINE10,#HEADLINE11,#HEADLINE250{width: 200px;}
+#HEADLINE21{top: 1634px; left: 110px;}
+#HEADLINE21 > .ladi-headline{font-size: 18px; font-weight: bold; line-height: 1.6; color: rgb(0, 0, 0); text-align: left;}
+#HEADLINE21 > .ladi-headline:hover,#HEADLINE30 > .ladi-headline:hover,#IMAGE94:hover > .ladi-image,#IMAGE97:hover > .ladi-image,#IMAGE98:hover > .ladi-image,#IMAGE99:hover > .ladi-image,#IMAGE101:hover > .ladi-image,#IMAGE102:hover > .ladi-image,#IMAGE103:hover > .ladi-image,#IMAGE104:hover > .ladi-image,#IMAGE105:hover > .ladi-image,#IMAGE106:hover > .ladi-image,#IMAGE107:hover > .ladi-image,#BOX7 > .ladi-box:hover,#IMAGE7:hover > .ladi-image,#IMAGE8:hover > .ladi-image,#IMAGE9:hover > .ladi-image,#HEADLINE3 > .ladi-headline:hover,#HEADLINE97 > .ladi-headline:hover,#HEADLINE98 > .ladi-headline:hover,#HEADLINE99 > .ladi-headline:hover,#HEADLINE100 > .ladi-headline:hover,#HEADLINE101 > .ladi-headline:hover,#HEADLINE102 > .ladi-headline:hover,#HEADLINE103 > .ladi-headline:hover,#BOX13 > .ladi-box:hover,#BOX12 > .ladi-box:hover,#BOX16 > .ladi-box:hover,#HEADLINE232 > .ladi-headline:hover,#HEADLINE22 > .ladi-headline:hover,#HEADLINE34 > .ladi-headline:hover,#HEADLINE231 > .ladi-headline:hover,#HEADLINE9 > .ladi-headline:hover,#HEADLINE14 > .ladi-headline:hover,#HEADLINE15 > .ladi-headline:hover,#HEADLINE19 > .ladi-headline:hover,#HEADLINE20 > .ladi-headline:hover,#HEADLINE10 > .ladi-headline:hover,#HEADLINE11 > .ladi-headline:hover,#HEADLINE16 > .ladi-headline:hover,#HEADLINE17 > .ladi-headline:hover,#HEADLINE251 > .ladi-headline:hover,#HEADLINE252 > .ladi-headline:hover,#HEADLINE253 > .ladi-headline:hover,#HEADLINE254 > .ladi-headline:hover,#HEADLINE255 > .ladi-headline:hover,#HEADLINE256 > .ladi-headline:hover,#HEADLINE246 > .ladi-headline:hover,#HEADLINE247 > .ladi-headline:hover,#HEADLINE248 > .ladi-headline:hover,#HEADLINE249 > .ladi-headline:hover,#HEADLINE79 > .ladi-headline:hover,#BOX10 > .ladi-box:hover{opacity: 1;}
+#HEADLINE30{width: 222px;top: 3624.27px; left: 12.4995px;}
+#HEADLINE30 > .ladi-headline{font-family: Oswald, sans-serif; font-size: 30.72px; font-style: italic; line-height: 1.6; color: rgb(84, 84, 84); text-align: left;}
+#HEADLINE30.ladi-animation > .ladi-headline,#HEADLINE3.ladi-animation > .ladi-headline,#HEADLINE22.ladi-animation > .ladi-headline{animation-name: fadeInDown; animation-delay: 1s; animation-duration: 1s; animation-iteration-count: 1;}
+#GROUP36{width: 128.875px; height: 241.003px;top: 422.998px; left: 418.749px;}
+#HTML_CODE3{width: 128.875px; height: 80.5473px;top: 80.228px; left: 0px;}
+#HTML_CODE4{width: 128.363px; height: 80.227px;}
+#HTML_CODE5{width: 128.875px; height: 80.227px;top: 160.776px; left: 0px;}
+#GROUP74{width: 420px; height: 2094.36px;top: 3673.27px; left: 0px;}
+#IMAGE94,#IMAGE94 > .ladi-image > .ladi-image-background,#IMAGE95,#IMAGE95 > .ladi-image > .ladi-image-background{width: 189.914px; height: 284.871px;}
+#IMAGE94{top: 288.5px; left: 229.66px;}
+#IMAGE94.ladi-animation > .ladi-image,#IMAGE95.ladi-animation > .ladi-image,#IMAGE98.ladi-animation > .ladi-image,#IMAGE102.ladi-animation > .ladi-image,#IMAGE105.ladi-animation > .ladi-image,#IMAGE106.ladi-animation > .ladi-image,#IMAGE107.ladi-animation > .ladi-image,#IMAGE8.ladi-animation > .ladi-image,#IMAGE9.ladi-animation > .ladi-image,#HEADLINE102.ladi-animation > .ladi-headline,#IMAGE5.ladi-animation > .ladi-image,#HEADLINE245.ladi-animation > .ladi-headline,#HEADLINE247.ladi-animation > .ladi-headline,#HEADLINE248.ladi-animation > .ladi-headline{animation-name: fadeInRight; animation-delay: 1s; animation-duration: 1s; animation-iteration-count: 1;}
+#IMAGE95{top: 0px; left: 229.66px;}
+#IMAGE96,#IMAGE96 > .ladi-image > .ladi-image-background{width: 225.666px; height: 351.499px;}
+#IMAGE96{top: 0px; left: 0.074px;}
+#IMAGE96.ladi-animation > .ladi-image,#IMAGE97.ladi-animation > .ladi-image,#IMAGE99.ladi-animation > .ladi-image,#IMAGE101.ladi-animation > .ladi-image,#IMAGE103.ladi-animation > .ladi-image,#IMAGE104.ladi-animation > .ladi-image,#HEADLINE100.ladi-animation > .ladi-headline,#IMAGE6.ladi-animation > .ladi-image,#HEADLINE256.ladi-animation > .ladi-headline{animation-name: fadeInLeft; animation-delay: 1s; animation-duration: 1s; animation-iteration-count: 1;}
+#IMAGE97,#IMAGE97 > .ladi-image > .ladi-image-background{width: 225.666px; height: 338.499px;}
+#IMAGE97{top: 356px; left: 0.074px;}
+#IMAGE98,#IMAGE98 > .ladi-image > .ladi-image-background{width: 189.914px; height: 284.982px;}
+#IMAGE98{top: 577.25px; left: 229.66px;}
+#IMAGE99,#IMAGE101,#IMAGE101 > .ladi-image > .ladi-image-background,#IMAGE104,#IMAGE104 > .ladi-image > .ladi-image-background{width: 225.666px; height: 338.631px;}
+#IMAGE99{top: 698.73px; left: 0px;}
+#IMAGE99 > .ladi-image > .ladi-image-background{width: 225.754px; height: 338.631px;}
+#IMAGE101{top: 1042.73px; left: 0.074px;}
+#IMAGE102,#IMAGE102 > .ladi-image > .ladi-image-background{width: 189.914px; height: 291px;}
+#IMAGE102{top: 865.29px; left: 230.086px;}
+#IMAGE103{width: 225.666px; height: 365px;top: 1385.73px; left: 0.074px;}
+#IMAGE103 > .ladi-image > .ladi-image-background{width: 243.381px; height: 365px;top: 0px; left: -17px;}
+#IMAGE104{top: 1755.73px; left: 0px;}
+#IMAGE105,#IMAGE105 > .ladi-image > .ladi-image-background{width: 189.914px; height: 302.982px;}
+#IMAGE105{top: 1161.29px; left: 229.66px;}
+#IMAGE106,#IMAGE106 > .ladi-image > .ladi-image-background{width: 189.914px; height: 305.99px;}
+#IMAGE106{top: 1469.74px; left: 230.086px;}
+#IMAGE107,#IMAGE107 > .ladi-image > .ladi-image-background{width: 189.914px; height: 314.983px;}
+#IMAGE107{top: 1779.38px; left: 230.086px;}
+#IMAGE48{width: 419.999px; height: 615.78px;top: 5773.92px; left: 0px;}
+#IMAGE48 > .ladi-image > .ladi-image-background{width: 445.274px; height: 667.78px;top: -52px; left: -16px;}
+#GROUP59,#BOX7{width: 419.999px; height: 118.078px;}
+#GROUP59{top: 5995.01px; left: 0px;}
+#BOX7 > .ladi-box,#IMAGE2 > .ladi-image,#BOX12 > .ladi-box,#BOX16 > .ladi-box,#BOX10 > .ladi-box{border-radius: 0px;}
+#BOX7 > .ladi-box{background-color: rgba(1, 1, 1, 0.6);}
+#GROUP11{width: 287px; height: 91.4265px;top: 7.315px; left: 66.4995px;}
+#GROUP11.ladi-animation > .ladi-group,#IMAGE7.ladi-animation > .ladi-image,#HEADLINE97.ladi-animation > .ladi-headline,#HEADLINE98.ladi-animation > .ladi-headline,#HEADLINE99.ladi-animation > .ladi-headline,#HEADLINE101.ladi-animation > .ladi-headline,#HEADLINE103.ladi-animation > .ladi-headline,#HEADLINE190.ladi-animation > .ladi-headline,#HEADLINE254.ladi-animation > .ladi-headline,#HEADLINE255.ladi-animation > .ladi-headline{animation-name: fadeInUp; animation-delay: 1s; animation-duration: 1s; animation-iteration-count: 1;}
+#HEADLINE32{width: 262px;top: 0px; left: 14.5px;}
+#HEADLINE32 > .ladi-headline{font-family: "Great Vibes Thiep"; font-size: 41.59px; font-weight: bold; line-height: 1.6; color: rgb(255, 255, 255); letter-spacing: 4px; text-align: center;}
+#HEADLINE33{width: 287px;top: 56.4265px; left: 0px;}
+#HEADLINE33 > .ladi-headline{font-family: "Great Vibes Thiep"; font-size: 21.73px; line-height: 1.6; color: rgb(255, 255, 255); letter-spacing: 4px; text-align: center;}
+#IMAGE1{width: 420px; height: 670.927px;top: -8px; left: 0px;}
+#IMAGE1 > .ladi-image > .ladi-image-background{width: 510.615px; height: 669.927px;top: 3px; left: -90px;background-image: url("../anh/trang-tri/nen-dau-trang.jpg");}
+#GROUP87{width: 382.333px; height: 214px;top: 1630px; left: 21.6666px;}
+#IMAGE7,#IMAGE7 > .ladi-image > .ladi-image-background{width: 142.667px; height: 214px;}
+#IMAGE7{top: 0px; left: 117.648px;}
+#IMAGE7 > .ladi-image,#IMAGE8 > .ladi-image,#IMAGE9 > .ladi-image{border-radius: 5px;}
+#IMAGE7 > .ladi-image,#IMAGE8 > .ladi-image,#IMAGE9 > .ladi-image,#IMAGE2 > .ladi-image,#BOX13 > .ladi-box,#IMAGE5 > .ladi-image,#IMAGE6 > .ladi-image,#BUTTON9 > .ladi-button,#BUTTON12 > .ladi-button{box-shadow: rgb(0, 0, 0) 0px 15px 20px -15px;}
+#IMAGE8,#IMAGE8 > .ladi-image > .ladi-image-background{width: 108.667px; height: 163px;}
+#IMAGE8{top: 25.5px; left: 0px;}
+#IMAGE9,#IMAGE9 > .ladi-image > .ladi-image-background{width: 106px; height: 159px;}
+#IMAGE9{top: 27.5px; left: 276.333px;}
+#HEADLINE3{width: 358px;top: 18px; left: 28.72px;}
+#HEADLINE3 > .ladi-headline{font-family: "FZ Alpha Brights"; font-size: 40.44px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#IMAGE2,#IMAGE2 > .ladi-image > .ladi-image-background{width: 231.333px; height: 347px;}
+#IMAGE2{top: 153.964px; left: 92.0535px;}
+#IMAGE2.ladi-animation > .ladi-image,#HEADLINE232.ladi-animation > .ladi-headline,#HEADLINE34.ladi-animation > .ladi-headline,#HEADLINE231.ladi-animation > .ladi-headline,#HEADLINE9.ladi-animation > .ladi-headline,#HEADLINE251.ladi-animation > .ladi-headline,#HEADLINE252.ladi-animation > .ladi-headline,#HEADLINE253.ladi-animation > .ladi-headline{animation-name: fadeIn; animation-delay: 1s; animation-duration: 1s; animation-iteration-count: 1;}
+#HEADLINE97{width: 166px;top: 86.964px; left: 22.4455px;}
+#HEADLINE97 > .ladi-headline,#HEADLINE98 > .ladi-headline{font-family: "DFVN ED Drayton"; font-size: 37.33px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE98{width: 170px;top: 86.964px; left: 228.554px;}
+#HEADLINE99{width: 55px;top: 94.164px; left: 180.22px;}
+#HEADLINE99 > .ladi-headline{font-family: "DFVN ED Drayton"; font-size: 27.38px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE100{width: 154px;top: 503.5px; left: 10px;}
+#HEADLINE100 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 28px; line-height: 1.6; color: rgb(0, 0, 0); text-align: right;}
+#LINE8{height: 71px;top: 510px; left: 158.304px;}
+#LINE8 > .ladi-line > .ladi-line-container,#LINE17 > .ladi-line > .ladi-line-container,#LINE18 > .ladi-line > .ladi-line-container{border-top: 0px !important; border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); border-left: 1px solid rgb(0, 0, 0);}
+#LINE8 > .ladi-line,#LINE17 > .ladi-line,#LINE18 > .ladi-line{height: 100%;padding: 0px 8px;}
+#HEADLINE101{width: 131px;top: 507.5px; left: 169.304px;}
+#HEADLINE101 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 45.23px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE102{width: 44px;top: 504.5px; left: 300.304px;}
+#HEADLINE102 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 35.18px; font-style: italic; line-height: 1.1; color: rgb(0, 0, 0); text-align: left;}
+#HEADLINE103,#HEADLINE248{width: 316px;}
+#HEADLINE103{top: 593.5px; left: 58.804px;}
+#HEADLINE103 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 16px; font-style: italic; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#GROUP75,#BOX13{width: 385.683px; height: 554px;}
+#GROUP75{top: 3023.5px; left: 17.8085px;}
+#BOX13 > .ladi-box{border-width: 0px; border-radius: 215px 215px 0px 0px; border-style: groove; border-color: rgb(0, 0, 0);background-color: rgb(253, 221, 230);}
+#HTML_CODE6{width: 361.6px; height: 206px;top: 261.97px; left: 12.0415px;}
+#IMAGE110{width: 126.882px; height: 118px;top: 26.3px; left: 129.4px;}
+#IMAGE110 > .ladi-image > .ladi-image-background{width: 138.301px; height: 138.301px;background-image: url("../anh/trang-tri/chibi-co-dau-chu-re.png");}
+#IMAGE110.ladi-animation > .ladi-image,#IMAGE73.ladi-animation > .ladi-image,#IMAGE74.ladi-animation > .ladi-image{animation-name: tada; animation-delay: 1s; animation-duration: 1s; animation-iteration-count: 1;}
+#HEADLINE186{width: 275px;top: 137.14px; left: 55.3415px;}
+#HEADLINE186 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 36px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE187{width: 334px;top: 227.69px; left: 25.8415px;}
+#HEADLINE187 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 15px; line-height: 1.6; color: rgb(0, 0, 0); letter-spacing: 1px; text-align: center;}
+#HEADLINE188{width: 317px;top: 179.69px; left: 34.3415px;}
+#HEADLINE188 > .ladi-headline{font-family: "FZ Photograph"; font-size: 35px; line-height: 1.6; color: rgb(115, 1, 1); text-align: center;}
+#HTML_CODE8{width: 419.428px; height: 664.001px;}
+#GROUP89,#GROUP37{width: 419.824px; height: 382px;}
+#GROUP89{top: 2625.56px; left: 0px;}
+#IMAGE86{width: 417.659px; height: 382px;}
+#IMAGE86 > .ladi-image > .ladi-image-background{width: 573px; height: 382px;top: 0px; left: -16px;}
+#BOX12{width: 419.648px; height: 382px;top: 0px; left: 0.176px;}
+#BOX12 > .ladi-box{background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgb(255, 255, 255)); background-color: initial; background-size: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-attachment: initial;-webkit-background-clip: initial;opacity: 0.95;}
+#HEADLINE190{width: 246px;top: 86.4px; left: 90.3001px;}
+#HEADLINE190 > .ladi-headline{font-family: Philosopher, sans-serif; font-size: 29.09px; line-height: 1.6; color: rgb(30, 29, 29); text-align: center;}
+#IMAGE111{width: 369.44px; height: 96.248px;top: 2.78px; left: 28.914px;}
+#IMAGE111 > .ladi-image > .ladi-image-background{width: 369.44px; height: 124.248px;background-image: url("../anh/trang-tri/chu-save-the-date.png");}
+#GROUP77,#BOX16{width: 362.983px; height: 36.44px;}
+#GROUP77{top: 139.26px; left: 21.4701px;}
+#BOX16 > .ladi-box{background-color: rgba(166, 158, 158, 0.5);}
+#HEADLINE191,#HEADLINE192,#HEADLINE193,#HEADLINE194,#HEADLINE195,#HEADLINE196,#HEADLINE197,#HEADLINE198,#HEADLINE199,#HEADLINE200,#HEADLINE201,#HEADLINE202,#HEADLINE203,#HEADLINE204,#HEADLINE205,#HEADLINE206,#HEADLINE207,#HEADLINE208,#HEADLINE209,#HEADLINE210,#HEADLINE211,#HEADLINE212,#HEADLINE213,#HEADLINE214,#HEADLINE215,#HEADLINE216,#HEADLINE217,#HEADLINE218,#HEADLINE219,#HEADLINE220,#HEADLINE221,#HEADLINE222,#HEADLINE223,#HEADLINE224,#HEADLINE225,#HEADLINE226,#HEADLINE227{width: 30px;}
+#HEADLINE191{top: 2.95459px; left: 23.8875px;}
+#HEADLINE191 > .ladi-headline,#HEADLINE192 > .ladi-headline,#HEADLINE193 > .ladi-headline,#HEADLINE194 > .ladi-headline,#HEADLINE195 > .ladi-headline,#HEADLINE196 > .ladi-headline,#HEADLINE197 > .ladi-headline{font-family: Oswald, sans-serif; font-size: 18px; line-height: 1.6; color: rgb(30, 29, 29); text-align: center;}
+#HEADLINE192{top: 2.95459px; left: 70.2388px;}
+#HEADLINE193{top: 2.95459px; left: 116.59px;}
+#HEADLINE194{top: 2.95459px; left: 163.02px;}
+#HEADLINE195{top: 2.95459px; left: 209.542px;}
+#HEADLINE196{top: 2.95459px; left: 256.053px;}
+#HEADLINE197{top: 2.95459px; left: 302.42px;}
+#GROUP78{width: 305.372px; height: 29px;top: 252.67px; left: 45.3561px;}
+#HEADLINE198 > .ladi-headline,#HEADLINE199 > .ladi-headline,#HEADLINE200 > .ladi-headline,#HEADLINE201 > .ladi-headline,#HEADLINE202 > .ladi-headline,#HEADLINE203 > .ladi-headline,#HEADLINE204 > .ladi-headline,#HEADLINE205 > .ladi-headline,#HEADLINE206 > .ladi-headline,#HEADLINE207 > .ladi-headline,#HEADLINE208 > .ladi-headline,#HEADLINE209 > .ladi-headline,#HEADLINE210 > .ladi-headline,#HEADLINE211 > .ladi-headline,#HEADLINE212 > .ladi-headline,#HEADLINE213 > .ladi-headline,#HEADLINE214 > .ladi-headline,#HEADLINE215 > .ladi-headline,#HEADLINE216 > .ladi-headline,#HEADLINE217 > .ladi-headline,#HEADLINE218 > .ladi-headline,#HEADLINE219 > .ladi-headline,#HEADLINE220 > .ladi-headline,#HEADLINE221 > .ladi-headline,#HEADLINE222 > .ladi-headline,#HEADLINE223 > .ladi-headline,#HEADLINE224 > .ladi-headline,#HEADLINE225 > .ladi-headline,#HEADLINE226 > .ladi-headline,#HEADLINE227 > .ladi-headline{font-family: Quicksand, sans-serif; font-size: 18px; line-height: 1.6; color: rgb(30, 29, 29); text-align: center;}
+#HEADLINE199,#HEADLINE206,#HEADLINE213,#HEADLINE219{top: 0px; left: 46.43px;}
+#HEADLINE200,#HEADLINE207,#HEADLINE214{top: 0px; left: 92.951px;}
+#HEADLINE201{top: 0px; left: 184.077px;}
+#HEADLINE202,#HEADLINE209,#HEADLINE216,#HEADLINE224{top: 0px; left: 139.463px;}
+#HEADLINE203{top: 0px; left: 229.021px;}
+#HEADLINE204{top: 0px; left: 275.372px;}
+#GROUP79{width: 306.414px; height: 29px;top: 285.19px; left: 45.3531px;}
+#HEADLINE208{top: 0px; left: 185.119px;}
+#HEADLINE210{top: 0px; left: 230.063px;}
+#HEADLINE211{top: 0px; left: 276.414px;}
+#GROUP80{width: 305.375px; height: 29px;top: 317.7px; left: 45.3531px;}
+#HEADLINE215{top: 0px; left: 184.08px;}
+#HEADLINE217{top: 0px; left: 229.024px;}
+#HEADLINE218{top: 0px; left: 275.375px;}
+#GROUP81{width: 76.43px; height: 29px;top: 350.22px; left: 45.3531px;}
+#GROUP82{width: 306.411px; height: 29px;top: 220.16px; left: 45.3561px;}
+#HEADLINE221{top: 0px; left: 185.116px;}
+#HEADLINE222{top: 0px; left: 230.06px;}
+#HEADLINE223{top: 0px; left: 276.411px;}
+#HEADLINE226{top: 0px; left: 46.431px;}
+#HEADLINE227{top: 0px; left: 92.952px;}
+#IMAGE112{width: 70.7854px; height: 59.2464px;top: 263.79px; left: 208.412px;}
+#IMAGE112 > .ladi-image > .ladi-image-background{width: 70.7854px; height: 67.4425px;background-image: url("../anh/trang-tri/tim-danh-dau-lich.png");}
+#IMAGE112.ladi-animation > .ladi-image{animation-name: pulse; animation-delay: 1s; animation-duration: 1s; animation-iteration-count: infinite;}
+#LINE3{width: 244px;top: 1446.85px; left: 88.824px;}
+#LINE3 > .ladi-line > .ladi-line-container,#LINE16 > .ladi-line > .ladi-line-container{border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); border-left: 0px !important;}
+#GROUP95{width: 399.84px; height: 38px;top: 6394.5px; left: 0px;}
+#HEADLINE232{width: 308px;}
+#HEADLINE232 > .ladi-headline{font-family: "1FTV VIP Hastegi"; font-size: 24px; font-weight: bold; line-height: 1.6; color: rgb(82, 97, 62); text-transform: uppercase; text-align: center;}
+#HEADLINE22{width: 178px;top: 1463.85px; left: 121.824px;}
+#HEADLINE22 > .ladi-headline{font-family: "Great Vibes Thiep"; font-size: 40.58px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE34,#HEADLINE231{width: 421px;}
+#HEADLINE34{top: 1576.5px; left: 0.324px;}
+#HEADLINE34 > .ladi-headline,#HEADLINE253 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 19px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE231{top: 1521.85px; left: 0.324px;}
+#HEADLINE231 > .ladi-headline,#HEADLINE250 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 23px; font-weight: bold; line-height: 1.6; color: rgb(115, 1, 1); text-align: center;}
+#LINE11{width: 400px;top: 1549px; left: 10.824px;}
+#LINE11 > .ladi-line > .ladi-line-container{border-top: 1px dotted rgb(0, 0, 0); border-right: 1px dotted rgb(0, 0, 0); border-bottom: 1px dotted rgb(0, 0, 0); border-left: 0px !important;}
+#HEADLINE9{width: 420px;top: 690.927px; left: -1.251px;}
+#HEADLINE9 > .ladi-headline{font-family: "DFVN ED Drayton"; font-size: 32px; line-height: 1.1; color: rgb(0, 0, 0); text-align: center;}
+#IMAGE5,#IMAGE5 > .ladi-image > .ladi-image-background,#IMAGE6,#IMAGE6 > .ladi-image > .ladi-image-background{width: 200px; height: 300px;}
+#IMAGE5{top: 1103.15px; left: 209.749px;}
+#IMAGE6{top: 803.15px; left: 9.749px;}
+#IMAGE73,#IMAGE73 > .ladi-image > .ladi-image-background{width: 72.15px; height: 72.15px;}
+#IMAGE73{top: 947px; left: 273.674px;}
+#IMAGE73 > .ladi-image > .ladi-image-background{background-image: url("../anh/trang-tri/chibi-chu-re.png");}
+#HEADLINE14,#HEADLINE19{width: 86px;}
+#HEADLINE14{top: 1028.15px; left: 266.749px;}
+#HEADLINE14 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 12px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE15{width: 180px;top: 1047.15px; left: 219.749px;}
+#HEADLINE15 > .ladi-headline{font-family: "FZ Alpha Brights"; font-size: 34.84px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#IMAGE74,#IMAGE74 > .ladi-image > .ladi-image-background{width: 73.35px; height: 73.35px;}
+#IMAGE74{top: 1258px; left: 63.074px;}
+#IMAGE74 > .ladi-image > .ladi-image-background{background-image: url("../anh/trang-tri/chibi-co-dau.png");}
+#HEADLINE19{top: 1340.5px; left: 56.749px;}
+#HEADLINE19 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 14.25px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE20{width: 193px;top: 1356.5px; left: 3.249px;}
+#HEADLINE20 > .ladi-headline{font-family: "FZ Alpha Brights"; font-size: 34.15px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE10{top: 815px; left: 209.749px;}
+#HEADLINE10 > .ladi-headline,#HEADLINE16 > .ladi-headline{font-family: "Lora Thiep"; font-size: 16px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE11{top: 901px; left: 209.749px;}
+#HEADLINE11 > .ladi-headline,#HEADLINE17 > .ladi-headline{font-family: "Lora Thiep"; font-size: 14px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE16{width: 210px;top: 1121.5px; left: 0px;}
+#HEADLINE17{width: 169px;top: 1206px; left: 15.249px;}
+#GROUP102{width: 391.022px; height: 316.53px;top: 1887.71px; left: 14.3498px;}
+#HEADLINE250{top: 99.41px; left: 95.5115px;}
+#LINE17,#LINE18{height: 65px;}
+#LINE17{top: 190.74px; left: 114px;}
+#LINE18{top: 190.74px; left: 260.022px;}
+#HEADLINE251{width: 253px;top: 143.55px; left: 69.0115px;}
+#HEADLINE251 > .ladi-headline,#HEADLINE252 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 18px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE252,#HEADLINE253{width: 114px;}
+#HEADLINE252{top: 208.74px; left: 0px;}
+#HEADLINE253{top: 208.24px; left: 277.022px;}
+#HEADLINE254{width: 93px;top: 159.53px; left: 149.011px;}
+#HEADLINE254 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 79.16px; font-weight: bold; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE255{width: 88px;top: 262.53px; left: 151.511px;}
+#HEADLINE255 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 18.53px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#IMAGE117{width: 97px; height: 89.03px;top: 0px; left: 147.011px;}
+#IMAGE117 > .ladi-image > .ladi-image-background{width: 200px; height: 200px;top: -54px; left: -47px;background-image: url("../anh/trang-tri/bong-bay-trai-tim.png");}
+#HEADLINE256{width: 306px;top: 292.53px; left: 42.5115px;}
+#HEADLINE256 > .ladi-headline,#HEADLINE248 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 14.77px; font-style: italic; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#BOX18{width: 385.56px; height: 298.98px;top: 2258.43px; left: 19.9143px;}
+#BOX18 > .ladi-box,#FORM3 .ladi-form-item-container,#FORM3 .ladi-form-checkout-box,#FORM3 .ladi-form-checkout-bump-offer-product,#FORM3 .ladi-form-label-container .ladi-form-label-item{border-width: 1px; border-radius: 15px; border-style: solid; border-color: rgb(241, 243, 244);}
+#BOX18 > .ladi-box,#POPUP2 > .ladi-popup > .ladi-popup-background,#FORM3 .ladi-form-item-background{background-color: rgb(255, 255, 255);}
+#BOX18 > .ladi-box{box-shadow: rgba(0, 0, 0, 0.5) 0px 15px 20px -15px;}
+#LINE16{width: 115px;top: 2306.7px; left: 155.194px;}
+#LINE16.ladi-animation > .ladi-line{animation-name: slideInRight; animation-delay: 1s; animation-duration: 2s; animation-iteration-count: 1;}
+#HEADLINE245{width: 313px;top: 2412.25px; left: 56.1943px;}
+#HEADLINE245 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 15px; line-height: 1.6; color: rgb(0, 0, 0); text-transform: uppercase; letter-spacing: 1px; text-align: center;}
+#HEADLINE246{top: 2318.86px; left: 122.194px;}
+#HEADLINE246 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 20px; font-weight: bold; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE246.ladi-animation > .ladi-headline{animation-name: slideInRight; animation-delay: 1s; animation-duration: 1s; animation-iteration-count: 1;}
+#HEADLINE247{top: 2350.86px; left: 122.194px;}
+#HEADLINE247 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 21px; font-weight: bold; line-height: 1.6; color: rgb(0, 0, 0); letter-spacing: 1px; text-align: center;}
+#HEADLINE248{top: 2382.75px; left: 54.6943px;}
+#HEADLINE249{width: 279px;top: 2270.51px; left: 73.1943px;}
+#HEADLINE249 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 23px; font-weight: bold; line-height: 1.6; color: rgb(119, 1, 1); text-align: center;}
+#HEADLINE249.ladi-animation > .ladi-headline{animation-name: slideInLeft; animation-delay: 1s; animation-duration: 2s; animation-iteration-count: 1;}
+#BUTTON9{width: 297.466px; height: 40px;top: 2497.56px; left: 63.9613px;}
+#BUTTON9 > .ladi-button > .ladi-button-background,#BUTTON12 > .ladi-button > .ladi-button-background{background-image: radial-gradient(circle, rgb(221, 214, 243), rgb(250, 172, 168)); background-color: initial; background-size: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-attachment: initial;-webkit-background-clip: initial;}
+#BUTTON9 > .ladi-button,#BUTTON12 > .ladi-button,#BUTTON11 > .ladi-button{border-radius: 15px;}
+#BUTTON_TEXT9{width: 297px;}
+#BUTTON_TEXT9,#BUTTON_TEXT12{top: 9px; left: 0px;}
+#BUTTON_TEXT9 > .ladi-headline,#BUTTON_TEXT12 > .ladi-headline{font-family: "SVN Saudagar"; font-size: 18px; font-weight: bold; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#BUTTON12{width: 298.834px; height: 40px;top: 2448.56px; left: 63.2773px;}
+#BUTTON_TEXT12{width: 299px;}
+#SECTION_POPUP{height: 0px;}
+#POPUP2,#POPUP3,#BOX10,#POPUP4{width: 420px; height: 400px;}
+#POPUP2,#POPUP3,#POPUP4{right: 0px; bottom: 0px; margin: auto;}
+#GROUP17{width: 402.75px; height: 304.297px;top: 47.8516px; left: 8.625px;}
+#GROUP18{width: 397.682px; height: 209.594px;}
+#IMAGE58{width: 220px; height: 209.594px;top: 0px; left: 104.25px;}
+#IMAGE58 > .ladi-image > .ladi-image-background{width: 340.848px; height: 737.594px;top: -182px; left: -62.636px;}
+#IMAGE59{width: 113px; height: 147px;top: 54.7968px; left: 0px;}
+#IMAGE59 > .ladi-image > .ladi-image-background{width: 158.165px; height: 170.259px;top: -23.2595px; left: -7.44304px;background-image: url("../anh/trang-tri/popup-chibi-trai.png");}
+#IMAGE60{width: 113.73px; height: 152px;top: 49.7968px; left: 283.952px;}
+#IMAGE60 > .ladi-image > .ladi-image-background{width: 158.364px; height: 160.183px;top: -8.18279px; left: -44.6332px;background-image: url("../anh/trang-tri/popup-chibi-phai.png");}
+#HEADLINE79{width: 381px;top: 233.297px; left: 21.75px;}
+#HEADLINE79 > .ladi-headline{font-family: RFyYWLVNlbWlCbxkLmZg; font-size: 14.87px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#POPUP3 > .ladi-popup > .ladi-popup-background{background-image: url("../anh/trang-tri/nen-popup-loi-chuc.jpg"); background-size: cover; background-origin: content-box; background-position: center top; background-repeat: repeat; background-attachment: scroll;}
+#BOX10 > .ladi-box{background-color: rgba(1, 1, 1, 0.3);}
+#FORM3{width: 358.699px; height: 311px;top: 56px; left: 30.6505px;}
+#FORM3 > .ladi-form{font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.6; color: rgb(30, 29, 29);}
+#FORM3 .ladi-form .ladi-form-checkout-payment-item{--check-size: calc(12px * 1.5); --width-quantity: calc(12px * 2.5 + 30px);}
+#FORM3 .ladi-form .ladi-form-item.ladi-form-checkbox .ladi-form-checkbox-item span[data-checked="false"],#FORM3 .ladi-form .ladi-form-item.ladi-form-checkbox .ladi-form-checkbox-item .ladi-editing,#FORM3 .ladi-form .ladi-form-item.ladi-form-checkbox .ladi-form-checkbox-item .ladi-editing::placeholder,#FORM3 .ladi-form .ladi-survey-option .ladi-survey-option-label,#FORM3 .ladi-form-item .ladi-form-control::placeholder,#FORM3 .ladi-form-item select.ladi-form-control[data-selected=""],#FORM3 .ladi-form-checkout-payment-quantity input{color: rgb(30, 29, 29);}
+#FORM3:hover .overlay-checkout{display: flex !important;}
+#FORM3 .ladi-form-item{padding-left: 5px; padding-right: 5px;}
+#FORM3 .ladi-form-item.otp-countdown:before{right: 10px;}
+#FORM3 .ladi-form-item.ladi-form-checkbox{padding-left: 10px; padding-right: 10px;}
+#FORM3 .ladi-form-item-container .ladi-form-item .ladi-form-control-select{background-image: url("data:image/svg+xml;utf8, %3Csvg%20width%3D%2232%22%20height%3D%2224%22%20viewBox%3D%220%200%2032%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpolygon%20points%3D%220%2C0%2032%2C0%2016%2C24%22%20style%3D%22fill%3A%20rgb(30%2C%2029%2C%2029)%22%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");}
+#FORM3 .ladi-form [data-form-checkout-item="product"] .ladi-form-checkout-payment-check.multiple.checked:before,#FORM3 .ladi-form [data-form-checkout-item="product"] .ladi-form-checkout-payment-check:not(.multiple).checked:before,#FORM3 .ladi-form [data-form-checkout-item="payment"] .ladi-form-checkout-payment-check.checked:before,#FORM3 .ladi-form [data-form-checkout-item="fee_shipping"] .ladi-form-checkout-payment-check.checked:before,#FORM3 .ladi-form [data-form-checkout-item="invoice"] .ladi-form-checkout-payment-check.multiple.checked:before,#FORM3 .ladi-form-checkout-payment-quantity .up:before,#FORM3 .ladi-form-checkout-payment-quantity .down:before,#FORM3 [data-form-checkout-item="payment"] .ladi-form-item .ladi-form-checkout-payment-content div:before{background-color: rgb(30, 29, 29);}
+#FORM3 .ladi-survey-option{text-align: left;}
+#FORM3 .ladi-form-item-container .ladi-form-item.ladi-form-quantity{width: calc(100% + 1px);}
+#FORM3 .ladi-form-item-container .ladi-form-quantity .button,#FORM3 .ladi-form [data-form-checkout-item="coupon_code"] .content-discount-block .placeholder i{background-color: rgb(241, 243, 244);}
+#FORM3 .ladi-form [data-form-checkout-item="total_price"] .space,#FORM3 .ladi-form [data-form-checkout-item="invoice"] .space,#FORM3 .ladi-form-checkout-payment-quantity input{border-color: rgb(241, 243, 244);}
+#FORM3 .ladi-form-checkout-payment-quantity input{width: 65px;}
+#FORM3 .ladi-form-item-background{border-radius: 14px;}
+#BUTTON11{width: 357.392px; height: 43.4965px;top: 267.503px; left: 0.653534px;}
+#BUTTON11 > .ladi-button > .ladi-button-background{background-color: rgb(107, 99, 99);}
+#BUTTON_TEXT11{width: 357px;top: 9.78671px; left: 0px;}
+#BUTTON_TEXT11 > .ladi-headline{font-size: 14px; font-weight: bold; line-height: 1.6; color: rgb(241, 243, 244); text-align: center;}
+#FORM_ITEM6,#FORM_ITEM7{width: 357.392px; height: 50.021px;}
+#FORM_ITEM6{top: 0px; left: 0.653534px;}
+#FORM_ITEM6 .ladi-form-item,#FORM_ITEM7 .ladi-form-item,#FORM_ITEM8 .ladi-form-item,#FORM_ITEM9 .ladi-form-item{background-image: none !important;}
+#FORM_ITEM7{top: 65.5166px; left: 0.653534px;}
+#FORM_ITEM8{width: 357.392px; height: 54.3706px;top: 197.637px; left: 0.653534px;}
+#FORM_ITEM9{width: 358.699px; height: 51.1084px;top: 131.033px; left: 0px;}
+#POPUP4 > .ladi-popup > .ladi-popup-background{background-image: url("../anh/trang-tri/nen-popup-mung-cuoi.jpg"); background-size: cover; background-origin: content-box; background-position: center top; background-repeat: repeat; background-attachment: scroll;}
+#HEADLINE228{width: 405px;top: 316.748px; left: 5.75px;}
+#HEADLINE228 > .ladi-headline{font-family: Sriracha, cursive; font-size: 15.28px; line-height: 1.6; color: rgb(0, 0, 0); text-align: center;}
+#HEADLINE229,#HEADLINE230{width: 207px;}
+#HEADLINE229{top: 10.2523px; left: 5.75px;}
+#HEADLINE229 > .ladi-headline,#HEADLINE230 > .ladi-headline{font-family: Tinos, serif; font-size: 16px; line-height: 1.6; color: rgb(26, 43, 76); text-transform: uppercase; text-align: center;}
+#IMAGE114,#IMAGE115{width: 186.03px; height: 182.581px;}
+#IMAGE114{top: 115.267px; left: 16.235px;}
+#IMAGE114 > .ladi-image > .ladi-image-background{width: 379.755px; height: 519.506px;top: -181.317px; left: -96.757px;}
+#HEADLINE230{top: 10.2523px; left: 207.25px;}
+#IMAGE115{top: 115.267px; left: 217.735px;}
+#IMAGE115 > .ladi-image > .ladi-image-background{width: 292.286px; height: 632.506px;top: -180.317px; left: -54.757px;}
+
+/* ---- Bổ sung khi chuyển từ LadiPage ---- */
+/* Ô ngày của lịch (build.js tự vẽ theo "Lịch - tháng/năm" trong noi-dung.md) */
+.lich-ngay{width: 30px;}
+.lich-ngay > .ladi-headline{font-family: Quicksand, sans-serif; font-size: 18px; line-height: 1.6; color: rgb(30, 29, 29); text-align: center;}
+/* Chân trang: đã bỏ icon Facebook/Instagram/TikTok nên cho dòng chữ chiếm hết chiều ngang */
+#GROUP95{width: 420px;}
+#HEADLINE232{width: 420px; left: 0;}
+/* Album: hiện mượt khi cuộn – bỏ độ trễ 1s và cú trượt ngang 40px của mẫu gốc (gây cảm giác giật) */
+@keyframes albumHien {
+  from {opacity: 0; transform: translate3d(0, 24px, 0);}
+  to {opacity: 1; transform: none;}
+}
+#GROUP74 > .ladi-group > .ladi-element.ladi-animation > .ladi-image{animation: albumHien 0.6s ease-out 0s 1 both !important; transition: none;}
+#GROUP74 > .ladi-group > .ladi-element > .ladi-image{will-change: opacity, transform; backface-visibility: hidden;}

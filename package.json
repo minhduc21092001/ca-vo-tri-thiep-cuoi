@@ -1,0 +1,13 @@
+{
+  "name": "thiep-cuoi-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Thiệp cưới online: sửa noi-dung.md và ảnh trong anh/, chạy build để tạo website/",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js --serve"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

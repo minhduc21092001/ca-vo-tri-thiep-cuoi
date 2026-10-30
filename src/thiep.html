@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<base href="{{@duong-dan-goc}}">
+<title>{{Tiêu đề trang}}</title>
+<meta name="description" content="{{attr:Mô tả khi chia sẻ}}">
+<meta property="og:title" content="{{attr:Tiêu đề trang}}">
+<meta property="og:description" content="{{attr:Mô tả khi chia sẻ}}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{@anh-chia-se}}">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="{{url:Biểu tượng trang (favicon)}}">
+<link rel="apple-touch-icon" href="{{url:Biểu tượng trang (favicon)}}">
+<script>
+/* Thiệp được thiết kế cho khung rộng 420px: trên điện thoại, phóng to/thu nhỏ cho vừa màn hình. */
+(function () {
+  var w = 420, scale = window.innerWidth / w;
+  var meta = document.querySelector('meta[name=viewport]');
+  meta.setAttribute('content', 'width=' + w + ',user-scalable=no,initial-scale=' + scale + ',minimum-scale=' + scale + ',maximum-scale=' + scale);
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@400;700&family=Roboto:wght@400;700&family=Philosopher:wght@400;700&family=Quicksand:wght@400;700&family=Sriracha&family=Tinos:wght@400;700&family=Allura&display=swap">
+<link rel="stylesheet" href="css/ladi-base.css">
+<link rel="stylesheet" href="css/thiep.css">
+<style id="style_animation">
+/* Các phần tử có hiệu ứng: ẩn cho tới khi cuộn tới (js/thiep.js sẽ hiện ra). */
+#HEADLINE3, #IMAGE2, #HEADLINE9, #IMAGE5, #IMAGE6, #IMAGE7, #HEADLINE22, #IMAGE8, #IMAGE9, #HEADLINE30, #GROUP11, #HEADLINE34, #IMAGE73, #IMAGE74, #HEADLINE97, #HEADLINE98, #HEADLINE99, #HEADLINE100, #HEADLINE101, #HEADLINE102, #HEADLINE103, #IMAGE94, #IMAGE95, #IMAGE96, #IMAGE97, #IMAGE98, #IMAGE99, #IMAGE101, #IMAGE102, #IMAGE103, #IMAGE104, #IMAGE105, #IMAGE106, #IMAGE107, #IMAGE110, #HEADLINE190, #IMAGE112, #HEADLINE231, #HEADLINE232, #LINE16, #HEADLINE245, #HEADLINE246, #HEADLINE247, #HEADLINE248, #HEADLINE249, #HEADLINE251, #HEADLINE252, #HEADLINE253, #HEADLINE254, #HEADLINE255, #HEADLINE256 {opacity: 0 !important; pointer-events: none !important;}
+</style>
+<style id="anh-tu-noi-dung">{{@css-anh}}</style>
+</head>
+<body>
+<div class="ladi-wraper"><div id="SECTION1" class='ladi-section'><div class='ladi-section-background'></div><div class="ladi-container"><div id="GROUP110" class='ladi-element'><div class='ladi-group'><div id="GROUP106" class='ladi-element'><div class='ladi-group'><div id="GROUP104" class='ladi-element'><div class='ladi-group'><div id="IMAGE118" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE119" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div></div></div><div id="GROUP105" class='ladi-element'><div class='ladi-group'><div id="IMAGE120" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE121" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div></div></div></div></div><div id="GROUP107" class='ladi-element'><div class='ladi-group'><div id="GROUP108" class='ladi-element'><div class='ladi-group'><div id="IMAGE122" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE123" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div></div></div><div id="GROUP109" class='ladi-element'><div class='ladi-group'><div id="IMAGE124" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE125" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div></div></div></div></div></div></div><div id="LINE4" class='ladi-element'><div class='ladi-line'><div class="ladi-line-container"></div></div></div><div id="IMAGE25" class='ladi-element'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="HEADLINE30" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Album - tiêu đề}}</h3> </div><div id="GROUP36" class='ladi-element'><div class='ladi-group'><div id="HTML_CODE3" class='ladi-element'><div class='ladi-html-code'><!-- ICON MÓN QUÀ -->
+<div id="gift-icon" style="
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    z-index: 9999;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #ff6fb3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+">
+    <span style="font-size: 24px;">🎁</span>
+</div>
+
+<!-- POPUP QR -->
+<div id="qr-popup" style="
+    display: none;
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    padding: 15px 12px;
+    z-index: 10000;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    text-align: center;
+    max-width: 240px;
+    font-family: 'Segoe UI', sans-serif;
+">
+    <img id="qr-img" src="{{url:Tài khoản 1 - ảnh QR}}" alt="QR" style="width: 150px; height: 210px; border-radius: 8px;">
+    <p style="margin-top: 10px; font-weight: 600; font-size: 14px; line-height: 1.4;">
+        Ngân hàng: {{Tài khoản 1 - ngân hàng}}<br>
+        STK: <span id="stk-text">{{Tài khoản 1 - số tài khoản}}</span><br>
+        Chủ TK: {{Tài khoản 1 - chủ tài khoản}}
+    </p>
+
+    <!-- Nút tải ảnh -->
+    <button type="button" data-tai-qr style="
+        margin: 6px 4px;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #4caf50, #66bb6a);
+        color: white;
+        font-weight: 500;
+        font-size: 13px;
+        cursor: pointer;
+        transition: 0.3s;
+    " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+        📥 Tải ảnh
+    </button>
+
+    <!-- Nút sao chép -->
+    <button type="button" data-sao-chep-stk style="
+        margin: 6px 4px;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #2196f3, #42a5f5);
+        color: white;
+        font-weight: 500;
+        font-size: 13px;
+        cursor: pointer;
+        transition: 0.3s;
+    " onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+        📋 Sao chép STK
+    </button>
+</div>
+
+</div></div><div id="HTML_CODE4" class='ladi-element'><div class='ladi-html-code'><audio id="myAudio" loop="">
+    <source src="{{url:Nhạc nền}}" type="audio/mpeg">
+</audio>
+
+<button id="toggleMusic" style="
+    position: fixed; bottom: 10px; left: 10px; padding: 10px;
+    background: rgba(255, 255, 255, 0.8); border: none; cursor: pointer;
+    font-size: 20px; z-index: 10000; width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+    🔊
+</button>
+
+</div></div><div id="HTML_CODE5" class='ladi-element'><div class='ladi-html-code'><style>
+  #scrollBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #ff6fb3; /* màu hồng */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  #scrollBtn:hover {
+    background-color: #e056a1;
+    transform: scale(1.08);
+  }
+
+  .arrow-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+    fill: white;
+  }
+
+  .rotate-up {
+    transform: rotate(180deg);
+  }
+</style>
+
+<!-- BUTTON SCROLL -->
+<button id="scrollBtn">
+  <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 16l-6-6h12z"></path>
+  </svg>
+</button>
+
+</div></div></div></div><div id="GROUP74" class='ladi-element'><div class='ladi-group'><div id="IMAGE94" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE95" class='ladi-element ladi-animation-hidden'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE96" class='ladi-element ladi-animation-hidden'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE97" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE98" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE99" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE101" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE102" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE103" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE104" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE105" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE106" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE107" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div></div></div><div id="IMAGE48" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="GROUP59" class='ladi-element'><div class='ladi-group'><div id="BOX7" class='ladi-element'><div class='ladi-box ladi-transition'></div></div><div id="GROUP11" class='ladi-element ladi-animation-hidden'><div class='ladi-group'><div id="HEADLINE32" class='ladi-element'><h3 class='ladi-headline'    >{{Cảm ơn - dòng 1}}</h3> </div><div id="HEADLINE33" class='ladi-element'><h3 class='ladi-headline'    >{{Cảm ơn - dòng 2}}</h3> </div></div></div></div></div><div id="IMAGE1" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="GROUP87" class='ladi-element'><div class='ladi-group'><div id="IMAGE7" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE8" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div><div id="IMAGE9" class='ladi-element ladi-animation-hidden'><div class='ladi-image ladi-transition'><div class="ladi-image-background"></div></div></div></div></div><div id="HEADLINE3" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Chữ Save The Date}}</h3> </div><div id="IMAGE2" class='ladi-element ladi-animation-hidden'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="HEADLINE97" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Tên chú rể}}</h3> </div><div id="HEADLINE98" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Tên cô dâu}}</h3> </div><div id="HEADLINE99" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >&amp;</h3> </div><div id="HEADLINE100" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Đầu trang - giờ và thứ}}</h3> </div><div id="LINE8" class='ladi-element'><div class='ladi-line'><div class="ladi-line-container"></div></div></div><div id="HEADLINE101" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Đầu trang - ngày và tháng}}</h3> </div><div id="HEADLINE102" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Đầu trang - năm}}</h3> </div><div id="HEADLINE103" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Đầu trang - ngày âm lịch}}</h3> </div><div id="GROUP75" class='ladi-element'><div class='ladi-group'><div id="BOX13" class='ladi-element'><div class='ladi-box ladi-transition'></div></div><div id="HTML_CODE6" class='ladi-element'><div class='ladi-html-code'><iframe src="{{@ban-do}}" width="365" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div><div id="IMAGE110" class='ladi-element ladi-animation-hidden'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="HEADLINE186" class='ladi-element'><h3 class='ladi-headline'    >{{Địa điểm - tiêu đề}}</h3> </div><div id="HEADLINE187" class='ladi-element'><h3 class='ladi-headline'    >{{Địa điểm - địa chỉ}}</h3> </div><div id="HEADLINE188" class='ladi-element'><h3 class='ladi-headline'    >{{Địa điểm - tên}}</h3> </div></div></div><div id="HTML_CODE8" class='ladi-element'><div class='ladi-html-code'><div class="cua-anh">
+  <div class="cua trai"></div>
+  <div class="cua phai"></div>
+</div>
+
+<style>
+.cua-anh {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 180%; /* Tỉ lệ 9:16 */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Cửa trái */
+.cua.trai {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('anh/trang-tri/cua-trai.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: moTrai 2.5s ease-in-out 1.2s forwards;
+}
+
+/* Cửa phải */
+.cua.phai {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('anh/trang-tri/cua-phai.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: moPhai 2.5s ease-in-out 1.2s forwards;
+}
+
+/* Hiệu ứng */
+@keyframes moTrai {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moPhai {
+  to {
+    transform: translateX(100%);
+  }
+}
+</style></div></div><div id="GROUP89" class='ladi-element'><div class='ladi-group'><div id="GROUP37" class='ladi-element'><div class='ladi-group'><div id="IMAGE86" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="BOX12" class='ladi-element'><div class='ladi-box ladi-transition'></div></div></div></div><div id="HEADLINE190" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline'    >{{@lich-tieu-de}}</h3> </div><div id="IMAGE111" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="GROUP77" class='ladi-element'><div class='ladi-group'><div id="BOX16" class='ladi-element'><div class='ladi-box ladi-transition'></div></div><div id="HEADLINE191" class='ladi-element'><h3 class='ladi-headline'    >T2<br></h3> </div><div id="HEADLINE192" class='ladi-element'><h3 class='ladi-headline'    >T3<br></h3> </div><div id="HEADLINE193" class='ladi-element'><h3 class='ladi-headline'    >T4<br></h3> </div><div id="HEADLINE194" class='ladi-element'><h3 class='ladi-headline'    >T5<br></h3> </div><div id="HEADLINE195" class='ladi-element'><h3 class='ladi-headline'    >T6<br></h3> </div><div id="HEADLINE196" class='ladi-element'><h3 class='ladi-headline'    >T7<br></h3> </div><div id="HEADLINE197" class='ladi-element'><h3 class='ladi-headline'    >CN</h3> </div></div></div>{{@lich-cac-ngay}}<div id="IMAGE112" class='ladi-element ladi-animation-hidden' style="{{@lich-vi-tri-tim}}"><div class='ladi-image'><div class="ladi-image-background"></div></div></div></div></div><div id="LINE3" class='ladi-element'><div class='ladi-line'><div class="ladi-line-container"></div></div></div><div id="GROUP95" class='ladi-element'><div class='ladi-group'><div id="HEADLINE232" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Chân trang}}</h3> </div></div></div><div id="HEADLINE22" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Thư mời - tiêu đề}}</h3> </div><div id="HEADLINE34" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Thư mời - lời mời}}</h3> </div><div id="HEADLINE231" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    ><span data-khach-moi>{{Thư mời - khách mời mặc định}}</span></h3> </div><div id="LINE11" class='ladi-element'><div class='ladi-line'><div class="ladi-line-container"></div></div></div><div id="HEADLINE9" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Câu thơ}}</h3> </div><div id="IMAGE5" class='ladi-element ladi-animation-hidden'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE6" class='ladi-element ladi-animation-hidden'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE73" class='ladi-element ladi-animation-hidden'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="HEADLINE14" class='ladi-element'><h3 class='ladi-headline ladi-transition'    >{{Chữ Chú Rể}}</h3> </div><div id="HEADLINE15" class='ladi-element'><h3 class='ladi-headline ladi-transition'    >{{Tên chú rể}}</h3> </div><div id="IMAGE74" class='ladi-element ladi-animation-hidden'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="HEADLINE19" class='ladi-element'><h3 class='ladi-headline ladi-transition'    >{{Chữ Cô Dâu}}</h3> </div><div id="HEADLINE20" class='ladi-element'><h3 class='ladi-headline ladi-transition'    >{{Tên cô dâu}}</h3> </div><div id="HEADLINE10" class='ladi-element'><h3 class='ladi-headline ladi-transition'    ><span style="font-weight: bold;">{{Nhà trai - tiêu đề}}</span><br>{{Nhà trai - bố mẹ}}</h3> </div><div id="HEADLINE11" class='ladi-element'><h3 class='ladi-headline ladi-transition'    >{{Nhà trai - địa chỉ}}</h3> </div><div id="HEADLINE16" class='ladi-element'><h3 class='ladi-headline ladi-transition'    ><span style="font-weight: bold;">{{Nhà gái - tiêu đề}}</span><br>{{Nhà gái - bố mẹ}}</h3> </div><div id="HEADLINE17" class='ladi-element'><h3 class='ladi-headline ladi-transition'    >{{Nhà gái - địa chỉ}}</h3> </div><div id="GROUP102" class='ladi-element'><div class='ladi-group'><div id="HEADLINE250" class='ladi-element'><h3 class='ladi-headline'    >{{Lễ thành hôn - tiêu đề}}</h3> </div><div id="LINE17" class='ladi-element'><div class='ladi-line'><div class="ladi-line-container"></div></div></div><div id="LINE18" class='ladi-element'><div class='ladi-line'><div class="ladi-line-container"></div></div></div><div id="HEADLINE251" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Lễ thành hôn - giờ và thứ}}</h3> </div><div id="HEADLINE252" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Lễ thành hôn - ô bên trái}}</h3> </div><div id="HEADLINE253" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Lễ thành hôn - ô bên phải}}</h3> </div><div id="HEADLINE254" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Lễ thành hôn - ngày}}</h3> </div><div id="HEADLINE255" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Lễ thành hôn - tháng}}</h3> </div><div id="IMAGE117" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="HEADLINE256" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Lễ thành hôn - âm lịch}}</h3> </div></div></div><div id="BOX18" class='ladi-element'><div class='ladi-box'></div></div><div id="LINE16" class='ladi-element ladi-animation-hidden'><div class='ladi-line'><div class="ladi-line-container"></div></div></div><div id="HEADLINE245" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline'    >{{Tiệc cưới - địa điểm}}</h3> </div><div id="HEADLINE246" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Tiệc cưới - giờ và thứ}}</h3> </div><div id="HEADLINE247" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Tiệc cưới - ngày}}</h3> </div><div id="HEADLINE248" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Tiệc cưới - âm lịch}}</h3> </div><div id="HEADLINE249" class='ladi-element ladi-animation-hidden'><h3 class='ladi-headline ladi-transition'    >{{Tiệc cưới - tiêu đề}}</h3> </div><div data-action="true" data-mo-popup="POPUP4" id="BUTTON9" class='ladi-element'><div class='ladi-button'><div class="ladi-button-background"></div><div id="BUTTON_TEXT9" class='ladi-element ladi-button-headline'><p class='ladi-headline'    >{{Nút gửi mừng cưới}}</p> </div></div></div><div data-action="true" data-mo-popup="POPUP3" id="BUTTON12" class='ladi-element'><div class='ladi-button'><div class="ladi-button-background"></div><div id="BUTTON_TEXT12" class='ladi-element ladi-button-headline'><p class='ladi-headline'    >{{Nút gửi lời chúc}}</p> </div></div></div></div></div><div id="SECTION_POPUP" class='ladi-section'><div class='ladi-section-background'></div><div class="ladi-container"><div id="POPUP2" class='ladi-element'><div class='ladi-popup'><div class="ladi-popup-background"></div><div id="GROUP17" class='ladi-element'><div class='ladi-group'><div id="GROUP18" class='ladi-element'><div class='ladi-group'><div id="IMAGE58" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE59" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="IMAGE60" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div></div></div><div id="HEADLINE79" class='ladi-element'><h3 class='ladi-headline ladi-transition'    >{{Lời cảm ơn sau khi gửi lời chúc}}</h3> </div></div></div></div></div><div id="POPUP3" class='ladi-element'><div class='ladi-popup'><div class="ladi-popup-background"></div><div id="BOX10" class='ladi-element'><div class='ladi-box ladi-transition'></div></div><div id="FORM3" class='ladi-element'><form autocomplete="off" method="post" class='ladi-form'><div id="BUTTON11" class='ladi-element'><div class='ladi-button'><div class="ladi-button-background"></div><div id="BUTTON_TEXT11" class='ladi-element ladi-button-headline'><p class='ladi-headline'    >{{Lời chúc - nút gửi}}</p> </div></div></div><div id="FORM_ITEM6" class='ladi-element'><div class="ladi-form-item-container"><div class="ladi-form-item-background"></div><div class='ladi-form-item'><input autocomplete="off" tabindex="1" name="name" required class="ladi-form-control" type="text" placeholder="{{Lời chúc - ô họ tên}}"   value="" /></div></div></div><div id="FORM_ITEM7" class='ladi-element'><div class="ladi-form-item-container"><div class="ladi-form-item-background"></div><div class='ladi-form-item'><textarea autocomplete="off" tabindex="4" name="message" required class="ladi-form-control" placeholder="{{Lời chúc - ô lời chúc}}"  ></textarea></div></div></div><div id="FORM_ITEM8" class='ladi-element'><div class="ladi-form-item-container"><div class="ladi-form-item-background"></div><div class='ladi-form-item'><select tabindex="3" name="tham_du"  class="ladi-form-control ladi-form-control-select" data-selected=""  ><option value="">{{Lời chúc - câu hỏi tham dự}}</option>{{@lua-chon-tham-du}}</select></div></div></div><div id="FORM_ITEM9" class='ladi-element'><div class="ladi-form-item-container"><div class="ladi-form-item-background"></div><div class='ladi-form-item'><input autocomplete="off" tabindex="4" name="quan_he"  class="ladi-form-control" type="text" placeholder="{{Lời chúc - ô mối quan hệ}}"   value="" /></div></div></div><button type="submit" class="ladi-hidden"></button></form></div></div></div><div id="POPUP4" class='ladi-element'><div class='ladi-popup'><div class="ladi-popup-background"></div><div id="HEADLINE228" class='ladi-element'><h3 class='ladi-headline'    >{{Mừng cưới - lời nhắn}}</h3> </div><div id="HEADLINE229" class='ladi-element'><h3 class='ladi-headline'    >{{Tài khoản 1 - ngân hàng}}<br>{{Tài khoản 1 - số tài khoản}}<br>{{Tài khoản 1 - chủ tài khoản}}</h3> </div><div id="IMAGE114" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div><div id="HEADLINE230" class='ladi-element'><h3 class='ladi-headline'    >{{Tài khoản 2 - ngân hàng}}<br>{{Tài khoản 2 - số tài khoản}}<br>{{Tài khoản 2 - chủ tài khoản}}</h3> </div><div id="IMAGE115" class='ladi-element'><div class='ladi-image'><div class="ladi-image-background"></div></div></div></div></div></div></div></div>
+<div id="backdrop-popup" class="backdrop-popup"></div>
+<script>window.THIEP = {{@cau-hinh-js}};</script>
+<script src="js/thiep.js"></script>
+</body>
+</html>
