@@ -39,7 +39,7 @@
 <div id="gift-icon" style="
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: max(20px, calc(50vw - 190px));
     z-index: 9999;
     cursor: pointer;
     width: 40px;
@@ -57,7 +57,7 @@
 <!-- POPUP QR: tài khoản của cả hai người -->
 <style>
   #qr-popup {
-    display: none; position: fixed; bottom: 120px; right: 12px; z-index: 10000;
+    display: none; position: fixed; bottom: 120px; right: max(12px, calc(50vw - 198px)); z-index: 10000;
     width: 340px; max-width: calc(100vw - 24px); box-sizing: border-box;
     background: #fff; border: 2px solid #f3c6dc; border-radius: 16px; padding: 12px 10px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.25); text-align: center; font-family: 'Segoe UI', sans-serif;
@@ -98,7 +98,7 @@
 </audio>
 
 <button id="toggleMusic" style="
-    position: fixed; bottom: 70px; right: 20px; padding: 10px;
+    position: fixed; bottom: 70px; right: max(20px, calc(50vw - 190px)); padding: 10px;
     background: rgba(255, 255, 255, 0.92); border: none; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     font-size: 20px; z-index: 10000; width: 40px; height: 40px;
     display: flex; align-items: center; justify-content: center; border-radius: 50%;">

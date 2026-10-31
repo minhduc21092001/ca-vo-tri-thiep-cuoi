@@ -11,6 +11,7 @@ ca-vo-tri/
 │   ├── anh-cuoi/          ảnh cưới ở các vị trí cố định (bìa, cạnh nhà trai/gái, thư mời, lịch…)
 │   ├── album/             13 ảnh của phần "Album ảnh cưới", 01.jpg → 13.jpg
 │   ├── mung-cuoi/         ảnh QR ngân hàng (tài khoản 1, tài khoản 2)
+│   ├── chia-se/           ảnh hiện khi gửi link qua Zalo/Messenger (nên là ảnh NGANG 1200×630, thấy rõ mặt)
 │   └── trang-tri/         hoa văn, nền, chibi, cửa mở đầu trang… (ít khi cần đổi)
 ├── nhac/nhac-nen.mp3      ← 🎵 nhạc nền
 ├── google-sheet/          ← lưu lời chúc của khách vào Google Sheet (xem HUONG-DAN.md trong đó)
@@ -45,11 +46,12 @@ ca-vo-tri/
 
 ## Tạo link cho khách
 
-Mở trang `…/tao-link/` trên website của bạn, điền rồi bấm **Tạo link**:
+Mở trang `…/tao-link/` trên website của bạn, gõ **một ô duy nhất: Người nhận**, rồi bấm **Tạo link**:
 
-- **Tiêu đề link**: ví dụ "Anh Minh và gia đình" → link ngắn `https://ten-mien.vn/anh-minh-va-gia-dinh`. Khi gửi qua Zalo/Messenger, khung xem trước hiện "💍 Thiệp cưới … – **Mời** Anh Minh và gia đình" (nếu bạn đã gõ chữ "Mời" ở đầu thì không lặp lại). Mọi link đều mở cùng một tấm thiệp.
-- **Tên khách mời** (không bắt buộc): hiện ở dòng dưới chữ "Thư Mời" và trên màn hình mở thiệp.
-- Link vừa tạo tự lưu vào danh sách bên dưới (danh sách chỉ lưu trên trình duyệt bạn đang dùng).
+- Ví dụ gõ "Anh Đức và người thương" → link ngắn `https://ten-mien.vn/anh-duc-va-nguoi-thuong`.
+- Khi gửi qua Zalo/Messenger, khung xem trước hiện "💍 Thiệp cưới … " và dòng dưới "**Mời** Anh Đức và người thương" (nếu bạn đã gõ chữ "Mời" ở đầu thì không bị lặp).
+- Trên thiệp, tên đó hiện ở dòng dưới chữ "Thư Mời" và trên màn hình mở thiệp (đã tự bỏ chữ "Mời" ở đầu nếu có).
+- Link vừa tạo tự lưu vào danh sách bên dưới (danh sách chỉ lưu trên trình duyệt bạn đang dùng). Mọi link đều mở cùng một tấm thiệp.
 
 Link ngắn hoạt động nhờ `netlify/edge-functions/link-ngan.js`: máy chủ Netlify nhớ tiêu đề và tên khách của từng link (lưu trong Netlify Blobs) để chèn vào thiệp. Vì vậy cần **deploy qua Git trên Netlify** (kéo thả thư mục `website/` sẽ không có chức năng này, trang tạo link sẽ tạm dùng link dài có `?khach=...`). Muốn chỉ mình bạn tạo được link: vào Netlify → *Site configuration → Environment variables*, thêm biến `MAT_KHAU_TAO_LINK` với mật khẩu tuỳ chọn; trang tạo link sẽ hỏi mật khẩu ở lần đầu.
 

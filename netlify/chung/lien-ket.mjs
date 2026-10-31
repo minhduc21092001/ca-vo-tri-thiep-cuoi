@@ -47,8 +47,11 @@ export function chenThongTin(html, duLieu) {
  */
 export async function taoLinkMoi(kho, body, matKhau) {
   if (matKhau && body.matKhau !== matKhau) return { trangThai: 401, duLieu: { loi: 'Sai mật khẩu tạo link.' } };
-  const tieuDe = String(body.tieuDe || '').trim().slice(0, 120);
-  const khach = String(body.khach || '').trim().slice(0, 80);
+  // Chỉ cần 1 ô "người nhận": vừa là tiêu đề "Mời ..." khi chia sẻ, vừa là tên ở dòng "Thư Mời" (bỏ chữ "Mời" đứng đầu).
+  // Vẫn nhận tieuDe/khach riêng để tương thích với bản cũ.
+  const nguoiNhan = String(body.nguoiNhan ?? body.tieuDe ?? '').trim().slice(0, 120);
+  const tieuDe = nguoiNhan;
+  const khach = String(body.khach ?? (nguoiNhan.replace(/^mời\s+/i, '').trim() || nguoiNhan)).trim().slice(0, 120);
   const goc = taoDuongDan(tieuDe);
   if (!goc) return { trangThai: 400, duLieu: { loi: 'Tiêu đề cần có ít nhất một chữ cái hoặc chữ số.' } };
   let duongDan = goc;

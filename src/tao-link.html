@@ -68,12 +68,9 @@
   <p class="phu">Mọi link tạo ở đây đều mở cùng một tấm thiệp, mỗi link có tiêu đề riêng khi gửi.</p>
 
   <section class="the">
-    <label for="tieu-de">Tiêu đề link <small>(hiện khi gửi qua Zalo/Messenger: “Thiệp cưới … – Mời …”)</small></label>
-    <input id="tieu-de" placeholder="Ví dụ: Bạn Đức và người thương" autocomplete="off" autofocus>
+    <label for="tieu-de">Người nhận <small>(tự thành “Mời …” khi gửi link, và hiện ở dòng “Thư Mời” trên thiệp)</small></label>
+    <input id="tieu-de" placeholder="Ví dụ: Anh Đức và người thương" autocomplete="off" autofocus>
     <p class="canh-bao" id="canh-bao"></p>
-
-    <label for="khach">Tên khách mời <small>(không bắt buộc, hiện ở dòng “Thư Mời” trên thiệp)</small></label>
-    <input id="khach" placeholder="Ví dụ: Anh Đức" autocomplete="off">
 
     <div id="o-mat-khau" hidden>
       <label for="mat-khau">Mật khẩu tạo link</label>
@@ -123,6 +120,8 @@
     if (TEN_DANH_RIENG.indexOf(s) >= 0) s += '-1';
     return s;
   }
+  // Tên hiện ở dòng "Thư Mời" trên thiệp: bỏ chữ "Mời" ở đầu nếu người dùng đã gõ
+  function tenKhach(t) { return t.replace(/^mời\s+/i, '').trim() || t; }
   function phanMoi(t) { return /^mời(\s|$)/i.test(t) ? t : 'Mời ' + t; }
 
   var hienTai = null;
@@ -144,7 +143,7 @@
     var cb = $('canh-bao');
     cb.style.display = tieuDe && !hopLe ? 'block' : 'none';
     cb.textContent = 'Tiêu đề cần có ít nhất một chữ cái hoặc chữ số.';
-    $('xem-truoc').textContent = hopLe ? 'Tiêu đề khi gửi: “… – ' + phanMoi(tieuDe) + '”' : '';
+    $('xem-truoc').textContent = hopLe ? 'Khi gửi sẽ hiện: “… – ' + phanMoi(tieuDe) + '”. Trên thiệp: “' + tenKhach(tieuDe) + '”' : '';
   }
 
   function thongBao(chu) {
@@ -169,7 +168,7 @@
   // Gửi lên máy chủ để lấy link ngắn (máy chủ nhớ tiêu đề + tên khách của link)
   function taoLink() {
     var tieuDe = $('tieu-de').value.trim();
-    var khach = $('khach').value.trim();
+    var khach = tenKhach(tieuDe);
     if (!taoDuongDan(tieuDe)) return;
     var nut = $('nut-tao');
     nut.disabled = true;
@@ -178,7 +177,7 @@
     fetch(new URL('../api/tao-link', location.href), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ tieuDe: tieuDe, khach: khach, matKhau: matKhau }),
+      body: JSON.stringify({ nguoiNhan: tieuDe, matKhau: matKhau }),
     }).then(function (r) {
       return r.json().catch(function () { return {}; }).then(function (d) { return { r: r, d: d }; });
     }).then(function (x) {
@@ -222,7 +221,7 @@
     ds.forEach(function (muc, i) {
       var li = document.createElement('li');
       var tt = document.createElement('div'); tt.className = 'tt';
-      var b = document.createElement('b'); b.textContent = muc.tieuDe + (muc.khach ? ' — ' + muc.khach : '');
+      var b = document.createElement('b'); b.textContent = muc.tieuDe + (muc.khach && muc.khach !== muc.tieuDe && muc.khach !== muc.tieuDe.replace(/^mời\s+/i, '') ? ' — ' + muc.khach : '');
       var a = document.createElement('a'); a.href = muc.link; a.target = '_blank'; a.rel = 'noopener'; a.textContent = muc.link;
       tt.appendChild(b); tt.appendChild(a);
       var chepBtn = document.createElement('button'); chepBtn.textContent = 'Sao chép';
@@ -236,7 +235,7 @@
     $('nut-xoa-het').hidden = ds.length === 0;
   }
 
-  ['tieu-de', 'khach'].forEach(function (id) {
+  ['tieu-de'].forEach(function (id) {
     $(id).addEventListener('input', capNhat);
     $(id).addEventListener('keydown', function (e) { if (e.key === 'Enter' && !$('nut-tao').disabled) taoLink(); });
   });

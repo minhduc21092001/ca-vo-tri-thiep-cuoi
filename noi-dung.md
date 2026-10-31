@@ -17,7 +17,7 @@ Sửa nội dung thiệp tại đây, sau đó chạy `npm run build` (hoặc đ
 
 - Tiêu đề trang: 💍 Thiệp cưới Thế Anh & Lan Hương 💕
 - Mô tả khi chia sẻ: 16 - 11 - 2026
-- Ảnh khi chia sẻ: anh/anh-cuoi/01-anh-bia.jpg
+- Ảnh khi chia sẻ: anh/chia-se/anh-chia-se.jpg
 - Biểu tượng trang (favicon): anh/trang-tri/favicon.png
 
 ## 2. Phần đầu trang (Save The Date)
@@ -62,6 +62,8 @@ Dòng "khách mời" sẽ tự đổi thành tên khách nếu link có tên kh�
 
 ## 6. Tiệc cưới (khung trắng có 2 nút)
 
+Nút "Chỉ đường" mở Google Maps. Dán link Google Maps của nhà (Google Maps → chọn địa điểm → Chia sẻ → Sao chép liên kết) vào dòng "link bản đồ" để khách tới đúng điểm ghim. Để trống thì tự tạo chỉ đường theo địa chỉ.
+
 - Tiệc cưới - tiêu đề: BỮA CƠM THÂN MẬT
 - Tiệc cưới - giờ và thứ: 17:00 – Chủ Nhật
 - Tiệc cưới - ngày: 15/11/2026
@@ -70,6 +72,8 @@ Dòng "khách mời" sẽ tự đổi thành tên khách nếu link có tên kh�
 - Bữa cơm - nhà gái địa chỉ: Xóm Mới, Thôn Viên Châu, | Xã Cổ Đô, TP. Hà Nội
 - Bữa cơm - nhà trai tiêu đề: Tại nhà trai
 - Bữa cơm - nhà trai địa chỉ: Xóm 4, Thôn Yên Bồ, | Xã Vật Lại, TP. Hà Nội
+- Bữa cơm - nhà gái link bản đồ: https://maps.app.goo.gl/a3cJ1Rz1e4LbccdGA
+- Bữa cơm - nhà trai link bản đồ: https://maps.app.goo.gl/uGjxTdNQYXxaoLmF7
 - Bữa cơm - nút chỉ đường: Chỉ đường
 - Nút gửi lời chúc: Gửi Lời Chúc Phúc
 - Hiện nút gửi lời chúc (có/không): không
@@ -110,9 +114,9 @@ Lời chúc được lưu vào Google Sheet nếu điền link bên dưới (cá
 - Tài khoản 1 - số tài khoản: 4510894176
 - Tài khoản 1 - chủ tài khoản: TRAN LAN HUONG
 - Tài khoản 1 - ảnh QR: anh/mung-cuoi/qr-tai-khoan-1.png
-- Tài khoản 2 - ngân hàng: TÊN NGÂN HÀNG
-- Tài khoản 2 - số tài khoản: 0000000000
-- Tài khoản 2 - chủ tài khoản: TÊN CHỦ TÀI KHOẢN
+- Tài khoản 2 - ngân hàng: AGRIBANK
+- Tài khoản 2 - số tài khoản: 2210181251999
+- Tài khoản 2 - chủ tài khoản: CHU THE ANH
 - Tài khoản 2 - ảnh QR: anh/mung-cuoi/qr-tai-khoan-2.png
 - Hiện nút quà nổi (có/không): có
 

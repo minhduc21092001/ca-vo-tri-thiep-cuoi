@@ -341,7 +341,7 @@ body {font-family: "Open Sans", sans-serif}
 /* ---- Màn hình "Chạm để mở thiệp" (chạm xong mới phát nhạc và mở cửa) ---- */
 body.chua-mo{overflow: hidden;}
 body.chua-mo .cua{animation-play-state: paused;}
-#man-mo{position: fixed; inset: 0; z-index: 2147483000; display: none; align-items: center; justify-content: center; padding-bottom: 0; box-sizing: border-box;
+#man-mo{position: fixed; top: 0; bottom: 0; left: 50%; width: min(100%, 420px); transform: translateX(-50%); box-shadow: 0 0 0 100vmax #1b1b1b; z-index: 2147483000; display: none; align-items: center; justify-content: center; padding-bottom: 0; box-sizing: border-box;
   height: 100vh; height: 100dvh; background-size: cover; background-position: center top; color: #fff; text-align: center;
   touch-action: none; cursor: pointer; transition: opacity .7s ease, visibility .7s;}
 #man-mo::before{content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(20,12,16,.35), rgba(20,12,16,.72));}

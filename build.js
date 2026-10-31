@@ -223,8 +223,9 @@ function build() {
 <meta property="og:image:height" content="${k.cao}">` : '';
     })(),
     '@css-anh': '\n' + taoCssAnh(lay),
-    '@chi-duong-gai': escAttr(linkChiDuong(lay('Bữa cơm - nhà gái địa chỉ'))),
-    '@chi-duong-trai': escAttr(linkChiDuong(lay('Bữa cơm - nhà trai địa chỉ'))),
+    // Có dán link Google Maps riêng thì dùng (chính xác hơn), không thì tạo link chỉ đường từ địa chỉ
+    '@chi-duong-gai': escAttr(lay('Bữa cơm - nhà gái link bản đồ') || linkChiDuong(lay('Bữa cơm - nhà gái địa chỉ'))),
+    '@chi-duong-trai': escAttr(lay('Bữa cơm - nhà trai link bản đồ') || linkChiDuong(lay('Bữa cơm - nhà trai địa chỉ'))),
     '@lua-chon-tham-du': luaChon,
     '@cau-hinh-js': JSON.stringify(cauHinh).replace(/</g, '\\u003c'),
     '@dia-chi-website': escAttr(lay('Địa chỉ website').replace(/\/+$/, '') + goc),
