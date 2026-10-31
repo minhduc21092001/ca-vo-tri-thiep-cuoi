@@ -37,11 +37,11 @@ ca-vo-tri/
 2. Mở <http://localhost:8080/> để xem thiệp, <http://localhost:8080/tao-link/> để tạo link.
 3. Sửa `noi-dung.md` hoặc chép ảnh mới vào `anh/`, lưu lại rồi **tải lại trang** là thấy thay đổi.
 
-**Đổi ảnh:** chép ảnh của bạn đè lên file cũ, **giữ nguyên tên file** (ví dụ thay `anh/album/05.jpg`). Nếu ảnh của bạn tên khác hoặc là `.png`, sửa đường dẫn tương ứng ở mục 13 trong `noi-dung.md`. Ảnh tự cắt giữa cho vừa khung; nên dùng ảnh dọc, rộng khoảng 800–1200px để trang tải nhanh.
+**Đổi ảnh:** chép ảnh của bạn đè lên file cũ, **giữ nguyên tên file** (ví dụ thay `anh/album/05.jpg`). Nếu ảnh của bạn tên khác hoặc là `.png`, sửa đường dẫn tương ứng ở mục 12 trong `noi-dung.md`. Ảnh tự cắt giữa cho vừa khung; nên dùng ảnh dọc, rộng khoảng 800–1200px để trang tải nhanh.
 
 **Lịch:** chỉ cần điền tháng, năm và ngày cưới ở mục 7, lịch và trái tim tự vẽ lại.
 
-**Tài khoản mừng cưới:** mẫu gốc chứa số tài khoản và QR của người khác nên đã được thay bằng chữ giữ chỗ. Nhớ điền tài khoản của bạn ở mục 11 và chép ảnh QR vào `anh/mung-cuoi/`.
+**Tài khoản mừng cưới:** mẫu gốc chứa số tài khoản và QR của người khác nên đã được thay bằng chữ giữ chỗ. Nhớ điền tài khoản của bạn ở mục 10 và chép ảnh QR vào `anh/mung-cuoi/`.
 
 ## Tạo link cho khách
 
@@ -64,7 +64,7 @@ Chạy `npm run build`, rồi đăng **thư mục `website/`**. Các cách dư�
 | **Vercel** | `npx vercel website --prod` |
 | **GitHub Pages** | Đưa nội dung `website/` lên nhánh/thư mục được publish. Nếu địa chỉ có dạng `ten.github.io/ten-repo/`, sửa `Đường dẫn gốc: /ten-repo/` trong `noi-dung.md`. Lưu ý: GitHub Pages trả link tuỳ ý qua trang 404 nên ảnh xem trước khi gửi qua Zalo/Messenger có thể không hiện. |
 
-Sau khi có tên miền, sửa `Địa chỉ website` ở mục 14 trong `noi-dung.md` và build lại: ảnh xem trước khi chia sẻ link cần địa chỉ này.
+Sau khi có tên miền, sửa `Địa chỉ website` ở mục 13 trong `noi-dung.md` và build lại: ảnh xem trước khi chia sẻ link cần địa chỉ này.
 
 ## Đã bỏ so với mẫu gốc
 

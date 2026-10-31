@@ -127,17 +127,13 @@ function taoLich(lay) {
   };
 }
 
-function taoBanDo(lay) {
-  const link = lay('Địa điểm - bản đồ');
-  const diaChi = lay('Địa điểm - địa chỉ').replace(/\|/g, ' ');
-  if (/^https?:\/\/(www\.)?google\.[^/]+\/maps\/embed/i.test(link) || /output=embed/.test(link)) return link;
-  if (link) {
-    console.warn('⚠️  "Địa điểm - bản đồ" không phải link nhúng (embed) của Google Maps, dùng địa chỉ để tìm bản đồ.');
-  }
-  return `https://maps.google.com/maps?q=${encodeURIComponent(diaChi)}&z=16&output=embed`;
-}
-
 const laKhong = (v) => /^(không|khong|ko|no|0|ẩn)$/i.test(v.trim());
+
+// Link mở Google Maps chỉ đường tới một địa chỉ (dấu "|" tính là khoảng trắng)
+function linkChiDuong(diaChi) {
+  const d = diaChi.replace(/\s*\|\s*/g, ' ').replace(/\s+/g, ' ').trim();
+  return d ? 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(d) : '#';
+}
 
 function taoCssAnh(lay) {
   let css = '';
@@ -152,8 +148,10 @@ function taoCssAnh(lay) {
     css += `#${id} > .ladi-image > .ladi-image-background{background-image: url("${encodeURI(anh)}"); top: 0; left: 0; width: 100%; height: 100%; background-size: contain; background-position: center center;}\n`;
   }
   if (laKhong(lay('Hiện nút gửi lời chúc (có/không)'))) {
-    // bỏ nút, kéo nút "Gửi Mừng Cưới" lên và thu khung trắng cho gọn
-    css += '#BUTTON12 {display: none !important;}\n#BUTTON9 {top: 2448.56px;}\n#BOX18 {height: 250px;}\n';
+    css += '#BUTTON12 {display: none !important;}\n';
+  } else {
+    // hiện nút "Gửi Lời Chúc Phúc" phía trên nút "Gửi Mừng Cưới", nới khung trắng thêm 48px
+    css += '#BUTTON12 {top: 2580px;}\n#BUTTON9 {top: 2629px;}\n#BOX18 {height: 424px;}\n';
   }
   if (laKhong(lay('Hiện nút quà nổi (có/không)'))) {
     css += '#gift-icon, #qr-popup {display: none !important;}\n';
@@ -225,7 +223,8 @@ function build() {
 <meta property="og:image:height" content="${k.cao}">` : '';
     })(),
     '@css-anh': '\n' + taoCssAnh(lay),
-    '@ban-do': escAttr(taoBanDo(lay)),
+    '@chi-duong-gai': escAttr(linkChiDuong(lay('Bữa cơm - nhà gái địa chỉ'))),
+    '@chi-duong-trai': escAttr(linkChiDuong(lay('Bữa cơm - nhà trai địa chỉ'))),
     '@lua-chon-tham-du': luaChon,
     '@cau-hinh-js': JSON.stringify(cauHinh).replace(/</g, '\\u003c'),
     '@dia-chi-website': escAttr(lay('Địa chỉ website').replace(/\/+$/, '') + goc),

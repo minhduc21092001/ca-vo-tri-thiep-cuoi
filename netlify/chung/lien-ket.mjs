@@ -30,7 +30,10 @@ export function phanMoi(tieuDe) {
 export function chenThongTin(html, duLieu) {
   const them = escHtml(phanMoi(duLieu.tieuDe));
   html = html.replace(/<title>([^<]*)<\/title>/, (_, cu) => `<title>${cu} – ${them}</title>`);
-  html = html.replace(/(<meta property="og:title" content=")([^"]*)(")/, (_, a, cu, b) => `${a}${cu} – ${them}${b}`);
+  // Khung xem trước (Zalo/Messenger/Facebook) hiện tiêu đề ở dòng trên, mô tả ở dòng dưới:
+  // dòng 1 = tên thiệp, dòng 2 = "Mời ..." (thay cho mô tả mặc định là ngày cưới)
+  html = html.replace(/(<meta property="og:description" content=")[^"]*(")/, (_, a, b) => `${a}${them}${b}`);
+  html = html.replace(/(<meta name="description" content=")[^"]*(")/, (_, a, b) => `${a}${them}${b}`);
   if (duLieu.khach) {
     html = html.replace(/(<span data-khach-moi>)[^<]*(<\/span>)/g, (_, a, b) => a + escHtml(duLieu.khach) + b);
   }

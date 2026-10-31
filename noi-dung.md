@@ -35,7 +35,7 @@ Sửa nội dung thiệp tại đây, sau đó chạy `npm run build` (hoặc đ
 - Câu thơ: Sự hiện diện của Quý khách | là niềm vinh hạnh cho gia đình chúng tôi!
 - Nhà trai - tiêu đề: Nhà Trai
 - Nhà trai - bố mẹ: Chu Thế Thỏa | Chu Thị Tâm
-- Nhà trai - địa chỉ:
+- Nhà trai - địa chỉ: Xóm 4, Thôn Yên Bồ | Xã Vật Lại, TP. Hà Nội
 - Nhà gái - tiêu đề: Nhà Gái
 - Nhà gái - bố mẹ: Trần Văn Cảnh | Phùng Thị Hiểu
 - Nhà gái - địa chỉ: Xóm Mới, Thôn Viên Châu | Xã Cổ Đô, TP. Hà Nội
@@ -52,7 +52,7 @@ Dòng "khách mời" sẽ tự đổi thành tên khách nếu link có tên kh�
 
 ## 5. Lễ thành hôn
 
-- Lễ thành hôn - tiêu đề: LỄ VU QUY
+- Lễ thành hôn - tiêu đề: LỄ VU QUY – NHÀ GÁI | LỄ THÀNH HÔN – NHÀ TRAI
 - Lễ thành hôn - giờ và thứ: Vào Lúc 11 giờ 30
 - Lễ thành hôn - ô bên trái: Thứ Hai
 - Lễ thành hôn - ngày: 16
@@ -66,7 +66,11 @@ Dòng "khách mời" sẽ tự đổi thành tên khách nếu link có tên kh�
 - Tiệc cưới - giờ và thứ: 17:00 – Chủ Nhật
 - Tiệc cưới - ngày: 15/11/2026
 - Tiệc cưới - âm lịch: (Tức ngày 07 tháng 10 năm Bính Ngọ.)
-- Tiệc cưới - địa điểm: Tại Tư Gia – Xã Cổ Đô, Hà Nội
+- Bữa cơm - nhà gái tiêu đề: Tại nhà gái
+- Bữa cơm - nhà gái địa chỉ: Xóm Mới, Thôn Viên Châu, | Xã Cổ Đô, TP. Hà Nội
+- Bữa cơm - nhà trai tiêu đề: Tại nhà trai
+- Bữa cơm - nhà trai địa chỉ: Xóm 4, Thôn Yên Bồ, | Xã Vật Lại, TP. Hà Nội
+- Bữa cơm - nút chỉ đường: Chỉ đường
 - Nút gửi lời chúc: Gửi Lời Chúc Phúc
 - Hiện nút gửi lời chúc (có/không): không
 - Nút gửi mừng cưới: Gửi Mừng Cưới
@@ -77,23 +81,14 @@ Dòng "khách mời" sẽ tự đổi thành tên khách nếu link có tên kh�
 - Lịch - năm: 2026
 - Lịch - ngày đánh dấu: 16
 
-## 8. Địa điểm tổ chức (khung hồng có bản đồ)
-
-Bản đồ: để trống thì tự tìm theo "Địa điểm - địa chỉ". Muốn chính xác hơn: mở Google Maps → chọn địa điểm → Chia sẻ → Nhúng bản đồ → sao chép link trong `src="..."` rồi dán vào đây.
-
-- Địa điểm - tiêu đề: Địa điểm tổ chức
-- Địa điểm - tên: Tư Gia Nhà Gái
-- Địa điểm - địa chỉ: Xóm Mới, Thôn Viên Châu, | Xã Cổ Đô, TP. Hà Nội.
-- Địa điểm - bản đồ:
-
-## 9. Album, lời cảm ơn, chân trang
+## 8. Album, lời cảm ơn, chân trang
 
 - Album - tiêu đề: Album ảnh cưới
 - Cảm ơn - dòng 1: Thank You
 - Cảm ơn - dòng 2: Rất hân hạnh đón tiếp
 - Chân trang: THIỆP CƯỚI THẾ ANH & LAN HƯƠNG
 
-## 10. Popup "Gửi lời chúc phúc"
+## 9. Popup "Gửi lời chúc phúc"
 
 Lời chúc được lưu vào Google Sheet nếu điền link bên dưới (cách lấy link: xem `google-sheet/HUONG-DAN.md`). Để trống thì khách vẫn gửi được và thấy lời cảm ơn, nhưng lời chúc **không được lưu**.
 
@@ -106,14 +101,14 @@ Lời chúc được lưu vào Google Sheet nếu điền link bên dưới (cá
 - Lời chúc - nút gửi: Xác Nhận Tham Dự
 - Lời cảm ơn sau khi gửi lời chúc: "Chân thành cảm ơn mọi người đã đến chung vui và gửi lời chúc phúc trong ngày trọng đại của chúng tôi. Sự hiện diện và tình cảm của mọi người là niềm hạnh phúc lớn nhất. ❤️"
 
-## 11. Mừng cưới (popup "Gửi Mừng Cưới" và nút quà 🎁 nổi góc phải)
+## 10. Mừng cưới (popup "Gửi Mừng Cưới" và nút quà 🎁 nổi góc phải)
 
 ⚠️ Nhớ thay thông tin tài khoản và ảnh QR của bạn (ảnh để trong `anh/mung-cuoi/`). Nút quà 🎁 hiện cả **Tài khoản 1** và **Tài khoản 2**.
 
 - Mừng cưới - lời nhắn: Chân thành cảm ơn mọi người đã  gửi lời chúc phúc trong ngày trọng đại của chúng mình. Bạn hãy để lại nội dung: Tên + mối quan hệ để chúng mình biết nha.
-- Tài khoản 1 - ngân hàng: TÊN NGÂN HÀNG
-- Tài khoản 1 - số tài khoản: 0000000000
-- Tài khoản 1 - chủ tài khoản: TÊN CHỦ TÀI KHOẢN
+- Tài khoản 1 - ngân hàng: BIDV
+- Tài khoản 1 - số tài khoản: 4510894176
+- Tài khoản 1 - chủ tài khoản: TRAN LAN HUONG
 - Tài khoản 1 - ảnh QR: anh/mung-cuoi/qr-tai-khoan-1.png
 - Tài khoản 2 - ngân hàng: TÊN NGÂN HÀNG
 - Tài khoản 2 - số tài khoản: 0000000000
@@ -121,7 +116,7 @@ Lời chúc được lưu vào Google Sheet nếu điền link bên dưới (cá
 - Tài khoản 2 - ảnh QR: anh/mung-cuoi/qr-tai-khoan-2.png
 - Hiện nút quà nổi (có/không): có
 
-## 12. Màn hình mở thiệp và nhạc nền
+## 11. Màn hình mở thiệp và nhạc nền
 
 Thiệp luôn **thử tự phát nhạc ngay khi mở**. Nếu trình duyệt của khách cho phép thì nhạc vang lên luôn. Nhiều trình duyệt chặn nhạc có tiếng với khách vào lần đầu, lúc đó thiệp hiện màn hình "Chạm để mở thiệp": khách chạm là nhạc vang lên và cánh cửa mở ra. Đặt `không` ở dòng đầu để bỏ màn hình này (khi đó nhạc bắt đầu ở lần chạm đầu tiên của khách nếu bị chặn).
 
@@ -132,7 +127,7 @@ Thiệp luôn **thử tự phát nhạc ngay khi mở**. Nếu trình duyệt c�
 
 - Nhạc nền: nhac/nhac-nen.mp3
 
-## 13. Ảnh cưới
+## 12. Ảnh cưới
 
 Cách đơn giản nhất: **chép ảnh mới đè lên file cũ, giữ nguyên tên file**. Hoặc đổi đường dẫn ở đây. Ảnh dọc (tỉ lệ khoảng 3:4) hiển thị đẹp nhất; ảnh sẽ tự cắt cho vừa khung.
 
@@ -162,7 +157,7 @@ Cách đơn giản nhất: **chép ảnh mới đè lên file cũ, giữ nguyên
 - Album ảnh 12: anh/album/12.jpg
 - Album ảnh 13: anh/album/13.jpg
 
-## 14. Cài đặt website
+## 13. Cài đặt website
 
 Đường dẫn gốc: để `/` nếu thiệp nằm ở tên miền riêng (vd. `https://thiepcuoi.vn/`). Nếu dùng GitHub Pages dạng `https://ten.github.io/ten-repo/` thì điền `/ten-repo/`.
 

@@ -341,7 +341,7 @@ body {font-family: "Open Sans", sans-serif}
 /* ---- Màn hình "Chạm để mở thiệp" (chạm xong mới phát nhạc và mở cửa) ---- */
 body.chua-mo{overflow: hidden;}
 body.chua-mo .cua{animation-play-state: paused;}
-#man-mo{position: fixed; inset: 0; z-index: 2147483000; display: none; align-items: flex-end; justify-content: center; padding-bottom: 16vh; box-sizing: border-box;
+#man-mo{position: fixed; inset: 0; z-index: 2147483000; display: none; align-items: center; justify-content: center; padding-bottom: 0; box-sizing: border-box;
   height: 100vh; height: 100dvh; background-size: cover; background-position: center top; color: #fff; text-align: center;
   touch-action: none; cursor: pointer; transition: opacity .7s ease, visibility .7s;}
 #man-mo::before{content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(20,12,16,.35), rgba(20,12,16,.72));}
@@ -357,3 +357,49 @@ body.chua-mo .cua{animation-play-state: paused;}
   background: rgba(255,111,179,.9); border: 0; border-radius: 999px; padding: 13px 30px; box-shadow: 0 6px 18px rgba(0,0,0,.35);
   animation: mmNhip 1.6s ease-in-out infinite;}
 @keyframes mmNhip{0%,100%{transform: scale(1);} 50%{transform: scale(1.07);}}
+
+/* ---- Bữa cơm thân mật: địa chỉ nhà gái và nhà trai (thẻ + nút Chỉ đường) ---- */
+#BUACOM{top: 2418px; left: 29px; width: 367px; display: flex; gap: 8px;}
+#BUACOM .bc-the{flex: 1; min-width: 0; height: 146px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center;
+  background: #fff7fb; border: 1px solid #f0c6da; border-radius: 12px; padding: 9px 6px 8px;}
+#BUACOM .bc-nhan{margin: 0; font-family: "Great Vibes Thiep", cursive; font-size: 24px; line-height: 1.15; color: rgb(119, 1, 1);}
+#BUACOM .bc-dc{margin: 5px 0 0; font-family: "Lora Thiep", serif; font-size: 13px; line-height: 1.45; color: #000;}
+#BUACOM .bc-nut{margin-top: auto; display: inline-block; padding: 6px 14px; border: 1px solid rgb(119, 1, 1); border-radius: 999px;
+  font-family: Quicksand, sans-serif; font-size: 12.5px; font-weight: 700; color: rgb(119, 1, 1); text-decoration: none; background: #fff;}
+#BUACOM .bc-nut:hover{background: rgb(119, 1, 1); color: #fff;}
+#BUTTON9{top: 2580px;}
+#BOX18{height: 376px;}
+/* Nội dung phía dưới được đẩy xuống 77px để nhường chỗ cho hai thẻ địa chỉ */
+#LINE4{top: 3729.87px;}
+#IMAGE25{top: 3684.50px;}
+#HEADLINE30{top: 3701.27px;}
+#GROUP74{top: 3750.27px;}
+#IMAGE48{top: 5850.92px;}
+#GROUP59{top: 6072.01px;}
+#GROUP89{top: 2702.56px;}
+#GROUP95{top: 6471.50px;}
+#SECTION1{height: 6516.7px;}
+/* Đã bỏ phần "Địa điểm tổ chức" (thiệp chung hai họ): kéo phần album trở lên 570px */
+#LINE4{top: 3159.87px;}
+#IMAGE25{top: 3114.50px;}
+#HEADLINE30{top: 3131.27px;}
+#GROUP74{top: 3180.27px;}
+#IMAGE48{top: 5280.92px;}
+#GROUP59{top: 5502.01px;}
+#GROUP95{top: 5901.50px;}
+#SECTION1{height: 5946.7px;}
+
+/* Tiêu đề lễ gồm 2 dòng (Vu Quy nhà gái / Thành hôn nhà trai): nới khung, đẩy phần giờ-ngày bên dưới xuống 28px */
+#GROUP102{height: 344.53px;}
+#HEADLINE250{width: 391px; left: 0px; top: 94px;}
+#HEADLINE250 > .ladi-headline{font-size: 21px;}
+#HEADLINE251{top: 171.55px;}
+#LINE17,#LINE18{top: 218.74px;}
+#HEADLINE252{top: 236.74px;}
+#HEADLINE253{top: 236.24px;}
+#HEADLINE254{top: 187.53px;}
+#HEADLINE255{top: 290.53px;}
+#HEADLINE256{top: 320.53px;}
+
+/* Chân trang: thu nhỏ chữ một chút để không bị hộp quà nổi che ở cuối trang */
+#HEADLINE232 > .ladi-headline{font-size: 20px;}
